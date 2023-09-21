@@ -1,0 +1,11 @@
+=============== Sep 21, 2023 (CST) ===============
+13:10:19.068885 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:10:19.087260 db@open opening
+13:10:19.097394 version@stat F·[] S·0B[] Sc·[]
+13:10:19.100612 db@janitor F·2 G·0
+13:10:19.100673 db@open done T·13.38152ms
+13:10:44.447924 memdb@flush N·23025 S·3MiB
+13:10:44.471560 memdb@flush created L0@3 N·23025 S·2MiB "\x00\x06\xfd..\x84\xbc$,v16155":"\xff\xff:..1u+,v14737"
+13:10:44.471633 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+13:10:44.473028 memdb@flush committed F·1 T·25.012384ms
+13:10:44.473371 journal@remove removed @1

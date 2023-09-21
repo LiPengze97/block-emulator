@@ -1,0 +1,99 @@
+S0N1: 2023/09/21 13:10:22 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:22 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:22 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:22 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:22 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:22 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:22 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:22 pbftInside_module.go:59: S0N1 : adding the block 1...now height = 0 
+S0N1: 2023/09/21 13:10:22 pbftInside_module.go:61: S0N1 : added the block 1... 
+S0N1: 2023/09/21 13:10:22 messageHandle.go:192: S0N1: this round of pbft 1 is end 
+S0N1: 2023/09/21 13:10:22 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:25 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:25 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:25 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:25 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:25 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:25 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:25 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:25 pbftInside_module.go:59: S0N1 : adding the block 2...now height = 1 
+S0N1: 2023/09/21 13:10:25 pbftInside_module.go:61: S0N1 : added the block 2... 
+S0N1: 2023/09/21 13:10:25 messageHandle.go:192: S0N1: this round of pbft 2 is end 
+S0N1: 2023/09/21 13:10:25 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:28 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:28 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:28 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:28 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:28 pbftInside_module.go:59: S0N1 : adding the block 3...now height = 2 
+S0N1: 2023/09/21 13:10:28 pbftInside_module.go:61: S0N1 : added the block 3... 
+S0N1: 2023/09/21 13:10:28 messageHandle.go:192: S0N1: this round of pbft 3 is end 
+S0N1: 2023/09/21 13:10:28 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:28 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:28 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:28 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:31 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:31 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:31 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:31 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:31 pbftInside_module.go:59: S0N1 : adding the block 4...now height = 3 
+S0N1: 2023/09/21 13:10:31 pbftInside_module.go:61: S0N1 : added the block 4... 
+S0N1: 2023/09/21 13:10:31 messageHandle.go:192: S0N1: this round of pbft 4 is end 
+S0N1: 2023/09/21 13:10:31 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:31 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:31 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:31 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:34 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:34 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:34 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:34 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:34 pbftInside_module.go:59: S0N1 : adding the block 5...now height = 4 
+S0N1: 2023/09/21 13:10:34 pbftInside_module.go:61: S0N1 : added the block 5... 
+S0N1: 2023/09/21 13:10:34 messageHandle.go:192: S0N1: this round of pbft 5 is end 
+S0N1: 2023/09/21 13:10:34 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:34 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:34 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:34 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:37 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:37 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:37 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:37 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:37 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:37 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:37 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:37 pbftInside_module.go:59: S0N1 : adding the block 6...now height = 5 
+S0N1: 2023/09/21 13:10:37 pbftInside_module.go:61: S0N1 : added the block 6... 
+S0N1: 2023/09/21 13:10:37 messageHandle.go:192: S0N1: this round of pbft 6 is end 
+S0N1: 2023/09/21 13:10:37 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:40 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:40 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:40 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:40 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:40 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:40 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:40 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:40 pbftInside_module.go:59: S0N1 : adding the block 7...now height = 6 
+S0N1: 2023/09/21 13:10:40 pbftInside_module.go:61: S0N1 : added the block 7... 
+S0N1: 2023/09/21 13:10:40 messageHandle.go:192: S0N1: this round of pbft 7 is end 
+S0N1: 2023/09/21 13:10:40 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:43 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:43 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:43 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:43 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:43 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:43 messageHandle.go:151: S0N1 received the Commit from ...0
+S0N1: 2023/09/21 13:10:43 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:43 pbftInside_module.go:59: S0N1 : adding the block 8...now height = 7 
+S0N1: 2023/09/21 13:10:43 pbftInside_module.go:61: S0N1 : added the block 8... 
+S0N1: 2023/09/21 13:10:43 messageHandle.go:192: S0N1: this round of pbft 8 is end 
+S0N1: 2023/09/21 13:10:43 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:46 pbftInside_module.go:42: S0N1 : the pre-prepare message is correct, putting it into the RequestPool. 
+S0N1: 2023/09/21 13:10:46 messageHandle.go:89: S0N1 : has broadcast the prepare message 
+S0N1: 2023/09/21 13:10:46 messageHandle.go:94: S0N1 : received the Prepare ...
+S0N1: 2023/09/21 13:10:46 messageHandle.go:125: S0N1 : is going to commit
+S0N1: 2023/09/21 13:10:46 messageHandle.go:139: S0N1 : commit is broadcast
+S0N1: 2023/09/21 13:10:46 messageHandle.go:151: S0N1 received the Commit from ...2
+S0N1: 2023/09/21 13:10:46 messageHandle.go:163: S0N1 : has received 2f + 1 commits ... 
+S0N1: 2023/09/21 13:10:46 pbftInside_module.go:59: S0N1 : adding the block 9...now height = 8 
+S0N1: 2023/09/21 13:10:46 pbftInside_module.go:61: S0N1 : added the block 9... 
+S0N1: 2023/09/21 13:10:46 messageHandle.go:192: S0N1: this round of pbft 9 is end 
+S0N1: 2023/09/21 13:10:46 messageHandle.go:151: S0N1 received the Commit from ...0

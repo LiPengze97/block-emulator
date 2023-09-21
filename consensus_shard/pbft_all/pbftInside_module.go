@@ -70,7 +70,9 @@ func (rphm *RawRelayPbftExtraHandleMod) HandleinCommit(cmsg *message.Commit) boo
 		relay1Txs := make([]*core.Transaction, 0)
 		for _, tx := range block.Body {
 			rsid := rphm.pbftNode.CurChain.Get_PartitionMap(tx.Recipient)
+			// rphm.pbftNode.pl.Plog.Printf("!!S%dN%d : receiver shard :%v local shard: %v receiver addr :%v\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID, rsid, rphm.pbftNode.ShardID, tx.Recipient)
 			if rsid != rphm.pbftNode.ShardID {
+				rphm.pbftNode.pl.Plog.Printf("S%dN%d : receiver shard :%v local shard: %v receiver addr :%v\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID, rsid, rphm.pbftNode.ShardID, tx.Recipient)
 				ntx := tx
 				ntx.Relayed = true
 				rphm.pbftNode.CurChain.Txpool.AddRelayTx(ntx, rsid)
@@ -95,7 +97,7 @@ func (rphm *RawRelayPbftExtraHandleMod) HandleinCommit(cmsg *message.Commit) boo
 			}
 			msg_send := message.MergeMessage(message.CRelay, rByte)
 			go networks.TcpDial(msg_send, rphm.pbftNode.ip_nodeTable[sid][0])
-			rphm.pbftNode.pl.Plog.Printf("S%dN%d : sended relay txs to %d\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID, sid)
+			rphm.pbftNode.pl.Plog.Printf("S%dN%d : sended %v relay txs to %d\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID, len(rphm.pbftNode.CurChain.Txpool.RelayPool[sid]), sid)
 		}
 		rphm.pbftNode.CurChain.Txpool.ClearRelayPool()
 		// send txs excuted in this block to the listener
@@ -116,6 +118,7 @@ func (rphm *RawRelayPbftExtraHandleMod) HandleinCommit(cmsg *message.Commit) boo
 		}
 		msg_send := message.MergeMessage(message.CBlockInfo, bByte)
 		go networks.TcpDial(msg_send, rphm.pbftNode.ip_nodeTable[params.DeciderShard][0])
+		rphm.pbftNode.pl.Plog.Printf("~~S%dN%d : Relay1Txs %v, content:[%v]\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID, len(relay1Txs), relay1Txs)
 		rphm.pbftNode.pl.Plog.Printf("S%dN%d : sended excuted txs\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID)
 		rphm.pbftNode.CurChain.Txpool.GetLocked()
 		rphm.pbftNode.writeCSVline([]string{strconv.Itoa(len(rphm.pbftNode.CurChain.Txpool.TxQueue)), strconv.Itoa(len(txExcuted)), strconv.Itoa(int(bim.Relay1TxNum))})

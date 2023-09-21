@@ -1,0 +1,1616 @@
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 1
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 1
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 1
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 1
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 1
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 1
+S14N0: 2023/09/21 13:10:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 1
+S14N0: 2023/09/21 13:10:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:22 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:22 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:22 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:22 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:22 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:22 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:22 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:22 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:59: S14N0 : adding the block 1...now height = 0 
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:61: S14N0 : added the block 1... 
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 1 
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:10:22 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:22 messageHandle.go:192: S14N0: this round of pbft 1 is end 
+S14N0: 2023/09/21 13:10:22 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:22 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 2
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 2
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 2
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 13 
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 2
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 2
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 2
+S14N0: 2023/09/21 13:10:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 4 
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:25 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:25 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:25 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:25 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:25 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:25 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:25 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:59: S14N0 : adding the block 2...now height = 1 
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:61: S14N0 : added the block 2... 
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 2 
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :7a250d5630b4cf539739df2c5dacb4c659f2488d
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :7a250d5630b4cf539739df2c5dacb4c659f2488d
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :6 local shard: 14 receiver addr :dac17f958d2ee523a2206206994597c13d831ec7
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :12 local shard: 14 receiver addr :2920f7d6134f4669343e70122ca9b8f19ef8fa5d
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :17b1e028a1837ff15ba9e7140add0d13790092a3
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :0 local shard: 14 receiver addr :6982508145454ce325ddbe47a25d4ec3d2311933
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :1 local shard: 14 receiver addr :1e917e764bc34d3bc313fe8159a6bd9d9ffd450d
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :17b1e028a1837ff15ba9e7140add0d13790092a3
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :11 local shard: 14 receiver addr :06450dee7fd2fb8e39061434babcfc05599a6fb8
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :0 local shard: 14 receiver addr :06c400beb958f272261441ae32e14a44507db50d
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :000000d40b595b94918a28b27d1e2c66f43a51d3
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :9bf1d7d63dd7a4ce167cf4866388226eeefa702e
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 2 relay txs to 0
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 1
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 6
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 4 relay txs to 10
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 11
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 12
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:100: S14N0 : sended 7 relay txs to 15
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 17, content:[[0xc002937440 0xc002937500 0xc0029375c0 0xc002937680 0xc002937740 0xc002937800 0xc0029378c0 0xc002937980 0xc002937a40 0xc002937b00 0xc002937bc0 0xc002937c80 0xc002937d40 0xc002937ec0 0xc0029a0000 0xc0029a00c0 0xc0029a0180]]
+S14N0: 2023/09/21 13:10:25 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:25 messageHandle.go:192: S14N0: this round of pbft 2 is end 
+S14N0: 2023/09/21 13:10:25 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:25 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:25 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 2
+S14N0: 2023/09/21 13:10:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:26 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 7 
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 3
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 3
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 3
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 6 
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 3
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 3
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 3
+S14N0: 2023/09/21 13:10:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 5 
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:28 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:28 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:28 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:28 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:28 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:28 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:28 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:59: S14N0 : adding the block 3...now height = 2 
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:61: S14N0 : added the block 3... 
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 3 
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :7a250d5630b4cf539739df2c5dacb4c659f2488d
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :f1e55b2619a5c424e7bc7ebb4fdfad9a499b7ae1
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :1 local shard: 14 receiver addr :6131b5fae19ea4f9d964eac0408e4408b66337b5
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :918c3fe13cb32f1b7d8209251ff8ae1ec79fb015
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :6 local shard: 14 receiver addr :dac17f958d2ee523a2206206994597c13d831ec7
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :cae881f72a21fbd9520e0a68fadf3df4449a02f5
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :17b1e028a1837ff15ba9e7140add0d13790092a3
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :14cdd6d3361cbeb0c79fe3a0a9dac9a6dc6ad168
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :cedefe438860d2789da6419b3a19cece2a41038d
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :cedefe438860d2789da6419b3a19cece2a41038d
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :cedefe438860d2789da6419b3a19cece2a41038d
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :cedefe438860d2789da6419b3a19cece2a41038d
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :6 local shard: 14 receiver addr :dac17f958d2ee523a2206206994597c13d831ec7
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :0 local shard: 14 receiver addr :fecfe3353968bbcfa7b0293af14f42d381efa3ef
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :6 local shard: 14 receiver addr :dac17f958d2ee523a2206206994597c13d831ec7
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :17b1e028a1837ff15ba9e7140add0d13790092a3
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:75: S14N0 : receiver shard :0 local shard: 14 receiver addr :d325d2d554b8614b32bea83c36d2f54578bb3a6e
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 2 relay txs to 0
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 1
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 3 relay txs to 6
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 10
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:100: S14N0 : sended 11 relay txs to 15
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 18, content:[[0xc002a3ee40 0xc002a3ef00 0xc002a3efc0 0xc002a3f080 0xc002a3f140 0xc002a3f200 0xc002a3f2c0 0xc002a3f5c0 0xc002a3f680 0xc002a3f740 0xc002a3f800 0xc002a3f8c0 0xc002a3f980 0xc002b3e300 0xc002b3e3c0 0xc002b3e480 0xc002b3e540 0xc002b3e600]]
+S14N0: 2023/09/21 13:10:28 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:28 messageHandle.go:192: S14N0: this round of pbft 3 is end 
+S14N0: 2023/09/21 13:10:28 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:28 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:28 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 3
+S14N0: 2023/09/21 13:10:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:29 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 5 
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 4
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 4
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 4
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 5 
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 4
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 4
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 4
+S14N0: 2023/09/21 13:10:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 4 
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 4
+S14N0: 2023/09/21 13:10:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:31 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:31 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:31 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:31 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:31 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:31 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:31 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:31 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:59: S14N0 : adding the block 4...now height = 3 
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:61: S14N0 : added the block 4... 
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 4 
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :df71ec3e6892c6f991277e0951eab7c5fd59efb9
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :0 local shard: 14 receiver addr :b8e2e2101ed11e9138803cd3e06e16dd19910647
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :7a250d5630b4cf539739df2c5dacb4c659f2488d
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :cedefe438860d2789da6419b3a19cece2a41038d
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 0
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 2 relay txs to 10
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:100: S14N0 : sended 10 relay txs to 15
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 13, content:[[0xc00016d8c0 0xc00016d980 0xc00016da40 0xc00016db00 0xc00016dbc0 0xc00016dc80 0xc00016dd40 0xc00016de00 0xc00016dec0 0xc00286a000 0xc00286a480 0xc00286a600 0xc00286a6c0]]
+S14N0: 2023/09/21 13:10:31 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:31 messageHandle.go:192: S14N0: this round of pbft 4 is end 
+S14N0: 2023/09/21 13:10:31 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:31 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:32 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 4
+S14N0: 2023/09/21 13:10:32 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:32 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 3 
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 5
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 5
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 5
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 5
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 5
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 3 
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 5
+S14N0: 2023/09/21 13:10:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 5
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:34 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 5 
+S14N0: 2023/09/21 13:10:34 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:34 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:34 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:34 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:34 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:34 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:34 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:34 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:59: S14N0 : adding the block 5...now height = 4 
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:61: S14N0 : added the block 5... 
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 5 
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :17b1e028a1837ff15ba9e7140add0d13790092a3
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :10 local shard: 14 receiver addr :f10db848a80fecf1d137c952300ed1d311ceb6da
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :7 local shard: 14 receiver addr :3e4d497fb7fc17297d69c6e7b6b7bb93af22ba88
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :7 local shard: 14 receiver addr :f7858da8a6617f7c6d0ff2bcafdb6d2eedf64840
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :7 local shard: 14 receiver addr :3e4d497fb7fc17297d69c6e7b6b7bb93af22ba88
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:75: S14N0 : receiver shard :7 local shard: 14 receiver addr :86e0d47bcda6cb348cc4c0ccd797896bc6dc5b57
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 4 relay txs to 7
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 2 relay txs to 10
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:100: S14N0 : sended 5 relay txs to 15
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 11, content:[[0xc0028b6300 0xc0028b63c0 0xc0028b6480 0xc0028b6540 0xc0028b6600 0xc0028b66c0 0xc0028b6cc0 0xc0028b6d80 0xc0028b6e40 0xc0028b6f00 0xc0028b6fc0]]
+S14N0: 2023/09/21 13:10:34 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:34 messageHandle.go:192: S14N0: this round of pbft 5 is end 
+S14N0: 2023/09/21 13:10:34 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:34 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:35 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 5
+S14N0: 2023/09/21 13:10:35 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:35 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 4 
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 6
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 6
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 6
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 6
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 6
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 6
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:36 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 1 
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 6
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:37 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:37 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:37 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:37 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:37 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:37 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:37 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:37 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:59: S14N0 : adding the block 6...now height = 5 
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:61: S14N0 : added the block 6... 
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 6 
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :000000d40b595b94918a28b27d1e2c66f43a51d3
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:100: S14N0 : sended 4 relay txs to 15
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 4, content:[[0xc00286b140 0xc00286b200 0xc00286b2c0 0xc00286b440]]
+S14N0: 2023/09/21 13:10:37 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:37 messageHandle.go:192: S14N0: this round of pbft 6 is end 
+S14N0: 2023/09/21 13:10:37 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:37 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:37 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 1 
+S14N0: 2023/09/21 13:10:38 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 6
+S14N0: 2023/09/21 13:10:38 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:38 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 0 
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 7
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 7
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 7
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 7
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 7
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 7
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:39 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 3 
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 7
+S14N0: 2023/09/21 13:10:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:40 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:40 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:40 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:40 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:40 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:40 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:40 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:59: S14N0 : adding the block 7...now height = 6 
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:61: S14N0 : added the block 7... 
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 7 
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :000000d40b595b94918a28b27d1e2c66f43a51d3
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :000000d40b595b94918a28b27d1e2c66f43a51d3
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:75: S14N0 : receiver shard :11 local shard: 14 receiver addr :a338ff0c914f70f485a32b761000eb10ede78bb8
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :000000d40b595b94918a28b27d1e2c66f43a51d3
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 11
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:100: S14N0 : sended 3 relay txs to 15
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 4, content:[[0xc002d629c0 0xc002d63080 0xc002d63140 0xc002d63200]]
+S14N0: 2023/09/21 13:10:40 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:40 messageHandle.go:192: S14N0: this round of pbft 7 is end 
+S14N0: 2023/09/21 13:10:40 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:40 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:40 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:41 pbftOutside_module.go:49: S14N0 : has handled injected txs msg, txs: 3 
+S14N0: 2023/09/21 13:10:41 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 7
+S14N0: 2023/09/21 13:10:41 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 8
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 8
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 8
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 8
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 8
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 8
+S14N0: 2023/09/21 13:10:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 8
+S14N0: 2023/09/21 13:10:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:43 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:43 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:43 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:43 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:43 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:43 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:43 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:43 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:59: S14N0 : adding the block 8...now height = 7 
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:61: S14N0 : added the block 8... 
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 8 
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :000000d40b595b94918a28b27d1e2c66f43a51d3
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:75: S14N0 : receiver shard :1 local shard: 14 receiver addr :ead482da0793b00bbae0e34c8cfae6daf29a44b2
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:75: S14N0 : receiver shard :15 local shard: 14 receiver addr :5a54fe5234e811466d5366846283323c954310b2
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 1 relay txs to 1
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:100: S14N0 : sended 2 relay txs to 15
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 3, content:[[0xc002ef2000 0xc002ef20c0 0xc002ef2180]]
+S14N0: 2023/09/21 13:10:43 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:43 messageHandle.go:192: S14N0: this round of pbft 8 is end 
+S14N0: 2023/09/21 13:10:43 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:43 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:44 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 8
+S14N0: 2023/09/21 13:10:44 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 3, the senderSeq is 9
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 4, the senderSeq is 9
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 1, the senderSeq is 9
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 9
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 5, the senderSeq is 9
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 2, the senderSeq is 9
+S14N0: 2023/09/21 13:10:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 0, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 9
+S14N0: 2023/09/21 13:10:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:46 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:46 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:46 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:46 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:46 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:46 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:46 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:46 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:59: S14N0 : adding the block 9...now height = 8 
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:61: S14N0 : added the block 9... 
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 9 
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:10:46 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:46 messageHandle.go:192: S14N0: this round of pbft 9 is end 
+S14N0: 2023/09/21 13:10:46 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:46 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:47 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 9
+S14N0: 2023/09/21 13:10:47 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:48 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 10
+S14N0: 2023/09/21 13:10:48 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 10
+S14N0: 2023/09/21 13:10:49 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:49 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:49 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:49 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:49 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:49 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:49 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:49 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:49 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:59: S14N0 : adding the block 10...now height = 9 
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:61: S14N0 : added the block 10... 
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 10 
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:10:49 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:49 messageHandle.go:192: S14N0: this round of pbft 10 is end 
+S14N0: 2023/09/21 13:10:49 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:49 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:50 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 10
+S14N0: 2023/09/21 13:10:50 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:51 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 11
+S14N0: 2023/09/21 13:10:51 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 11
+S14N0: 2023/09/21 13:10:52 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:52 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:52 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:52 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:52 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:52 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:52 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:52 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:52 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:59: S14N0 : adding the block 11...now height = 10 
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:61: S14N0 : added the block 11... 
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 11 
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:10:52 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:52 messageHandle.go:192: S14N0: this round of pbft 11 is end 
+S14N0: 2023/09/21 13:10:52 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:52 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:53 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 11
+S14N0: 2023/09/21 13:10:53 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:54 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 12
+S14N0: 2023/09/21 13:10:54 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 12
+S14N0: 2023/09/21 13:10:55 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:55 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:55 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:55 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:55 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:55 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:55 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:55 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:59: S14N0 : adding the block 12...now height = 11 
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:61: S14N0 : added the block 12... 
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 12 
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:10:55 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:55 messageHandle.go:192: S14N0: this round of pbft 12 is end 
+S14N0: 2023/09/21 13:10:55 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:55 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:55 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:56 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 12
+S14N0: 2023/09/21 13:10:56 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:57 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 13
+S14N0: 2023/09/21 13:10:57 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 13
+S14N0: 2023/09/21 13:10:58 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:10:58 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:10:58 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:10:58 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:58 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:10:58 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:10:58 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:10:58 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:10:58 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:59: S14N0 : adding the block 13...now height = 12 
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:61: S14N0 : added the block 13... 
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 13 
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:10:58 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:10:58 messageHandle.go:192: S14N0: this round of pbft 13 is end 
+S14N0: 2023/09/21 13:10:58 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:10:58 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:10:59 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 13
+S14N0: 2023/09/21 13:10:59 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:00 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 14
+S14N0: 2023/09/21 13:11:00 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 14
+S14N0: 2023/09/21 13:11:01 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:01 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:01 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:01 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:01 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:01 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:01 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:01 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:01 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:59: S14N0 : adding the block 14...now height = 13 
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:61: S14N0 : added the block 14... 
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 14 
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:01 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:01 messageHandle.go:192: S14N0: this round of pbft 14 is end 
+S14N0: 2023/09/21 13:11:01 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:01 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:02 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 14
+S14N0: 2023/09/21 13:11:02 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:03 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 15
+S14N0: 2023/09/21 13:11:03 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 15
+S14N0: 2023/09/21 13:11:04 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:04 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:04 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:04 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:04 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:04 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:04 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:04 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:59: S14N0 : adding the block 15...now height = 14 
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:61: S14N0 : added the block 15... 
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 15 
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:04 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:04 messageHandle.go:192: S14N0: this round of pbft 15 is end 
+S14N0: 2023/09/21 13:11:04 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:04 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:04 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:05 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 15
+S14N0: 2023/09/21 13:11:05 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:06 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 16
+S14N0: 2023/09/21 13:11:06 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 16
+S14N0: 2023/09/21 13:11:07 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:07 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:07 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:07 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:07 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:07 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:07 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:07 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:07 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:59: S14N0 : adding the block 16...now height = 15 
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:61: S14N0 : added the block 16... 
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 16 
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:07 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:07 messageHandle.go:192: S14N0: this round of pbft 16 is end 
+S14N0: 2023/09/21 13:11:07 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:07 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:08 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 16
+S14N0: 2023/09/21 13:11:08 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:09 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 17
+S14N0: 2023/09/21 13:11:09 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 17
+S14N0: 2023/09/21 13:11:10 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:10 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:10 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:10 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:10 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:10 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:10 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:10 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:10 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:59: S14N0 : adding the block 17...now height = 16 
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:61: S14N0 : added the block 17... 
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 17 
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:10 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:10 messageHandle.go:192: S14N0: this round of pbft 17 is end 
+S14N0: 2023/09/21 13:11:10 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:10 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:11 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 17
+S14N0: 2023/09/21 13:11:11 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:12 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 18
+S14N0: 2023/09/21 13:11:12 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 18
+S14N0: 2023/09/21 13:11:13 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:13 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:13 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:13 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:13 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:13 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:13 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:13 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:13 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:59: S14N0 : adding the block 18...now height = 17 
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:61: S14N0 : added the block 18... 
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 18 
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:13 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:13 messageHandle.go:192: S14N0: this round of pbft 18 is end 
+S14N0: 2023/09/21 13:11:13 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:13 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:14 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 18
+S14N0: 2023/09/21 13:11:14 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:15 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 19
+S14N0: 2023/09/21 13:11:15 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 19
+S14N0: 2023/09/21 13:11:16 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:16 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:16 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:16 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:16 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:16 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:16 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:16 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:16 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:59: S14N0 : adding the block 19...now height = 18 
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:61: S14N0 : added the block 19... 
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 19 
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:16 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:16 messageHandle.go:192: S14N0: this round of pbft 19 is end 
+S14N0: 2023/09/21 13:11:16 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:16 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:17 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 19
+S14N0: 2023/09/21 13:11:17 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:18 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 20
+S14N0: 2023/09/21 13:11:18 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 20
+S14N0: 2023/09/21 13:11:19 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:19 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:19 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:19 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:19 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:19 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:19 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:19 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:59: S14N0 : adding the block 20...now height = 19 
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:61: S14N0 : added the block 20... 
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 20 
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:19 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:19 messageHandle.go:192: S14N0: this round of pbft 20 is end 
+S14N0: 2023/09/21 13:11:19 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:19 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:19 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:20 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 20
+S14N0: 2023/09/21 13:11:20 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:21 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 21
+S14N0: 2023/09/21 13:11:21 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 21
+S14N0: 2023/09/21 13:11:22 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:22 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:22 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:22 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:22 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:22 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:22 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:22 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:22 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:59: S14N0 : adding the block 21...now height = 20 
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:61: S14N0 : added the block 21... 
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 21 
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:22 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:22 messageHandle.go:192: S14N0: this round of pbft 21 is end 
+S14N0: 2023/09/21 13:11:22 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:22 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:23 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 21
+S14N0: 2023/09/21 13:11:23 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:24 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 22
+S14N0: 2023/09/21 13:11:24 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 22
+S14N0: 2023/09/21 13:11:25 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:25 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:25 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:25 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:25 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:25 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:25 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:25 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:25 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:59: S14N0 : adding the block 22...now height = 21 
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:61: S14N0 : added the block 22... 
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 22 
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:25 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:25 messageHandle.go:192: S14N0: this round of pbft 22 is end 
+S14N0: 2023/09/21 13:11:25 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:25 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:26 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 22
+S14N0: 2023/09/21 13:11:26 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:27 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 23
+S14N0: 2023/09/21 13:11:27 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 23
+S14N0: 2023/09/21 13:11:28 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:28 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:28 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:28 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:28 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:28 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:28 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:28 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:59: S14N0 : adding the block 23...now height = 22 
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:61: S14N0 : added the block 23... 
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 23 
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:28 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:28 messageHandle.go:192: S14N0: this round of pbft 23 is end 
+S14N0: 2023/09/21 13:11:28 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:28 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:28 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:29 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 23
+S14N0: 2023/09/21 13:11:29 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:30 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 24
+S14N0: 2023/09/21 13:11:30 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 24
+S14N0: 2023/09/21 13:11:31 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:31 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:31 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:31 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:31 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:31 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:31 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:31 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:31 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:59: S14N0 : adding the block 24...now height = 23 
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:61: S14N0 : added the block 24... 
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 24 
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:31 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:31 messageHandle.go:192: S14N0: this round of pbft 24 is end 
+S14N0: 2023/09/21 13:11:31 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:31 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:32 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 24
+S14N0: 2023/09/21 13:11:32 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:33 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 25
+S14N0: 2023/09/21 13:11:33 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 25
+S14N0: 2023/09/21 13:11:34 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:34 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:34 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:34 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:34 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:34 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:34 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:34 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:59: S14N0 : adding the block 25...now height = 24 
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:61: S14N0 : added the block 25... 
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 25 
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:34 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:34 messageHandle.go:192: S14N0: this round of pbft 25 is end 
+S14N0: 2023/09/21 13:11:34 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:34 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:34 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:35 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 25
+S14N0: 2023/09/21 13:11:35 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:36 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 26
+S14N0: 2023/09/21 13:11:36 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 26
+S14N0: 2023/09/21 13:11:37 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:37 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:37 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:37 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:37 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:37 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:37 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:37 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:37 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:59: S14N0 : adding the block 26...now height = 25 
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:61: S14N0 : added the block 26... 
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 26 
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:37 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:37 messageHandle.go:192: S14N0: this round of pbft 26 is end 
+S14N0: 2023/09/21 13:11:37 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:37 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:38 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 26
+S14N0: 2023/09/21 13:11:38 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:39 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 27
+S14N0: 2023/09/21 13:11:39 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 27
+S14N0: 2023/09/21 13:11:40 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:40 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:40 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:40 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:40 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:40 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:40 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:40 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:40 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:59: S14N0 : adding the block 27...now height = 26 
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:61: S14N0 : added the block 27... 
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 27 
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:40 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:40 messageHandle.go:192: S14N0: this round of pbft 27 is end 
+S14N0: 2023/09/21 13:11:40 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:40 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:41 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 27
+S14N0: 2023/09/21 13:11:41 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:42 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 28
+S14N0: 2023/09/21 13:11:42 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 28
+S14N0: 2023/09/21 13:11:43 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:43 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:43 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:43 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:43 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:43 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:43 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:43 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:43 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:59: S14N0 : adding the block 28...now height = 27 
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:61: S14N0 : added the block 28... 
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 28 
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:43 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:43 messageHandle.go:192: S14N0: this round of pbft 28 is end 
+S14N0: 2023/09/21 13:11:43 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:43 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:44 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 28
+S14N0: 2023/09/21 13:11:44 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:45 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 8, the senderSeq is 29
+S14N0: 2023/09/21 13:11:45 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 6, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 9, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 10, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 12, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 11, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 7, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 13, the senderSeq is 29
+S14N0: 2023/09/21 13:11:46 pbftOutside_module.go:39: S14N0 : has handled relay txs msg
+S14N0: 2023/09/21 13:11:46 messageHandle.go:28: S14N0 get sequenceLock locked, now trying to propose...
+S14N0: 2023/09/21 13:11:46 messageHandle.go:35: S14N0 put the request into the pool ...
+S14N0: 2023/09/21 13:11:46 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:46 messageHandle.go:125: S14N0 : is going to commit
+S14N0: 2023/09/21 13:11:46 messageHandle.go:139: S14N0 : commit is broadcast
+S14N0: 2023/09/21 13:11:46 messageHandle.go:94: S14N0 : received the Prepare ...
+S14N0: 2023/09/21 13:11:46 messageHandle.go:151: S14N0 received the Commit from ...2
+S14N0: 2023/09/21 13:11:46 messageHandle.go:163: S14N0 : has received 2f + 1 commits ... 
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:59: S14N0 : adding the block 29...now height = 28 
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:61: S14N0 : added the block 29... 
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:66: S14N0 : main node is trying to send relay txs at height = 29 
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 0
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 1
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 2
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 3
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 4
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 5
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 6
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 7
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 8
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 9
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 10
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 11
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 12
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 13
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:100: S14N0 : sended 0 relay txs to 15
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:121: ~~S14N0 : Relay1Txs 0, content:[[]]
+S14N0: 2023/09/21 13:11:46 pbftInside_module.go:122: S14N0 : sended excuted txs
+S14N0: 2023/09/21 13:11:46 messageHandle.go:192: S14N0: this round of pbft 29 is end 
+S14N0: 2023/09/21 13:11:46 messageHandle.go:199: S14N0 get sequenceLock unlocked...
+S14N0: 2023/09/21 13:11:46 messageHandle.go:151: S14N0 received the Commit from ...1
+S14N0: 2023/09/21 13:11:47 pbftOutside_module.go:34: S14N0 : has received relay txs from shard 15, the senderSeq is 29
+S14N0: 2023/09/21 13:11:47 pbftOutside_module.go:39: S14N0 : has handled relay txs msg

@@ -65,7 +65,8 @@ func (d *Supervisor) NewSupervisor(ip string, pcc *params.ChainConfig, committee
 	case "Broker":
 		d.comMod = committee.NewBrokerCommitteeMod(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
 	default:
-		d.comMod = committee.NewRelayCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
+		// d.comMod = committee.NewRelayCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
+		d.comMod = committee.NewRelayCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.BaseDataPath, params.TotalDataSize, params.BatchSize)
 	}
 
 	d.testMeasureMods = make([]measure.MeasureModule, 0)
@@ -227,7 +228,7 @@ func (d *Supervisor) CloseSupervisor() {
 		d.sl.Slog.Println(measureMod.OutputRecord())
 		println()
 	}
-
+	d.sl.Slog.Println(params.AllocaionMethod)
 	d.sl.Slog.Println("Trying to input .csv")
 	// write to .csv file
 	dirpath := params.DataWrite_path + "supervisor_measureOutput/"

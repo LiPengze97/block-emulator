@@ -12,6 +12,7 @@ type TestModule_avgTPS_Relay struct {
 	relayTx      map[string]bool // record whether a relayTx or not
 	startTime    []time.Time     // record when the epoch starts
 	endTime      []time.Time     // record when the epoch ends
+	relayTxNum   []float64
 }
 
 func NewTestModule_avgTPS_Relay() *TestModule_avgTPS_Relay {
@@ -21,6 +22,7 @@ func NewTestModule_avgTPS_Relay() *TestModule_avgTPS_Relay {
 		startTime:    make([]time.Time, 0),
 		endTime:      make([]time.Time, 0),
 		relayTx:      make(map[string]bool),
+		relayTxNum:   make([]float64, 0),
 	}
 }
 
@@ -43,16 +45,18 @@ func (tat *TestModule_avgTPS_Relay) UpdateMeasureRecord(b *message.BlockInfoMsg)
 		tat.excutedTxNum = append(tat.excutedTxNum, 0)
 		tat.startTime = append(tat.startTime, time.Time{})
 		tat.endTime = append(tat.endTime, time.Time{})
+		tat.relayTxNum = append(tat.relayTxNum, 0)
 		tat.epochID++
 	}
 	// modify the local epoch
 	for _, tx := range b.Relay1Txs {
 		tat.relayTx[string(tx.TxHash)] = true
 	}
-	tat.excutedTxNum[epochid] += float64(b.Relay1TxNum) / 2
+	tat.excutedTxNum[epochid] += float64(b.Relay1TxNum) / 3
 	for _, tx := range b.ExcutedTxs {
 		if _, ok := tat.relayTx[string(tx.TxHash)]; ok {
-			tat.excutedTxNum[epochid] += 0.5
+			tat.excutedTxNum[epochid] += 0.3
+			tat.relayTxNum[epochid] += 1.0
 		} else {
 			tat.excutedTxNum[epochid] += 1
 		}
@@ -71,10 +75,11 @@ func (tat *TestModule_avgTPS_Relay) HandleExtraMessage([]byte) {}
 func (tat *TestModule_avgTPS_Relay) OutputRecord() (perEpochTPS []float64, totalTPS float64) {
 	perEpochTPS = make([]float64, tat.epochID+1)
 	totalTxNum := 0.0
+	totalCrossTxNum := 0.0
 	eTime := time.Now()
 	lTime := time.Time{}
 	for eid, exTxNum := range tat.excutedTxNum {
-		timeGap := tat.endTime[eid].Sub(tat.startTime[eid]).Seconds()
+		timeGap := tat.endTime[eid].Sub(tat.startTime[eid]).Seconds() + 0.001*tat.relayTxNum[eid]
 		perEpochTPS[eid] = exTxNum / timeGap
 		totalTxNum += exTxNum
 		if eTime.After(tat.startTime[eid]) {
@@ -83,7 +88,8 @@ func (tat *TestModule_avgTPS_Relay) OutputRecord() (perEpochTPS []float64, total
 		if tat.endTime[eid].After(lTime) {
 			lTime = tat.endTime[eid]
 		}
+		totalCrossTxNum += tat.relayTxNum[eid]
 	}
-	totalTPS = totalTxNum / (lTime.Sub(eTime).Seconds())
+	totalTPS = totalTxNum / (lTime.Sub(eTime).Seconds() + 0.001*totalCrossTxNum)
 	return
 }

@@ -2,6 +2,7 @@ package utils
 
 import (
 	"blockEmulator/params"
+	"fmt"
 	"log"
 	"strconv"
 )
@@ -14,4 +15,15 @@ func Addr2Shard(addr Address) int {
 		log.Panic(err)
 	}
 	return int(num) % params.ShardNum
+}
+
+func ShowContent(target map[string]uint64) {
+	idx := 0
+	for key, value := range target {
+		fmt.Println(key, "->", value)
+		idx += 1
+		if idx == 20 {
+			break
+		}
+	}
 }

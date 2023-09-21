@@ -8,10 +8,12 @@ import (
 	"blockEmulator/params"
 	"blockEmulator/storage"
 	"blockEmulator/utils"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"log"
 	"math/big"
+	"os"
 	"sync"
 	"time"
 
@@ -43,6 +45,27 @@ func GetTxTreeRoot(txs []*core.Transaction) []byte {
 	return transactionTree.Hash().Bytes()
 }
 
+func (bc *BlockChain) load_PartitionMap() {
+	filepath := ""
+	if params.AllocaionMethod == "Spring" {
+		filepath = params.AllocationInput
+	} else {
+		filepath = params.OtherAllocationInput
+	}
+
+	data, err := os.ReadFile(filepath)
+	if err != nil {
+		fmt.Println("Error reading JSON file:", err)
+		return
+	}
+
+	err = json.Unmarshal(data, &bc.PartitionMap)
+	if err != nil {
+		fmt.Println("Error unmarshaling JSON:", err)
+		return
+	}
+}
+
 // Write Partition Map
 func (bc *BlockChain) Update_PartitionMap(key string, val uint64) {
 	bc.pmlock.Lock()
@@ -55,6 +78,7 @@ func (bc *BlockChain) Get_PartitionMap(key string) uint64 {
 	bc.pmlock.RLock()
 	defer bc.pmlock.RUnlock()
 	if _, ok := bc.PartitionMap[key]; !ok {
+		fmt.Printf("cannot found receiver %v", key)
 		return uint64(utils.Addr2Shard(key))
 	}
 	return bc.PartitionMap[key]
@@ -233,6 +257,9 @@ func NewBlockChain(cc *params.ChainConfig, db ethdb.Database) (*BlockChain, erro
 		Storage:      storage.NewStorage(cc),
 		PartitionMap: make(map[string]uint64),
 	}
+	if params.AllocaionMethod != "Monoxide" {
+		bc.load_PartitionMap()
+	}
 	curHash, err := bc.Storage.GetNewestBlockHash()
 	if err != nil {
 		fmt.Println("Get newest block hash err")
@@ -265,6 +292,7 @@ func NewBlockChain(cc *params.ChainConfig, db ethdb.Database) (*BlockChain, erro
 	if err != nil {
 		log.Panic()
 	}
+
 	fmt.Println("The status trie can be built")
 	fmt.Println("Generated a new blockchain successfully")
 	return bc, nil

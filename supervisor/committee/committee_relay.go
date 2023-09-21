@@ -10,6 +10,7 @@ import (
 	"blockEmulator/utils"
 	"encoding/csv"
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"math/big"
@@ -25,23 +26,57 @@ type RelayCommitteeModule struct {
 	IpNodeTable  map[uint64]map[uint64]string
 	sl           *supervisor_log.SupervisorLog
 	Ss           *signal.StopSignal // to control the stop message sending
+	CrossNum     int
+	InNum        int
+
+	addressToShard map[string]uint64
 }
 
 func NewRelayCommitteeModule(Ip_nodeTable map[uint64]map[uint64]string, Ss *signal.StopSignal, slog *supervisor_log.SupervisorLog, csvFilePath string, dataNum, batchNum int) *RelayCommitteeModule {
-	return &RelayCommitteeModule{
-		csvPath:      csvFilePath,
-		dataTotalNum: dataNum,
-		batchDataNum: batchNum,
-		nowDataNum:   0,
-		IpNodeTable:  Ip_nodeTable,
-		Ss:           Ss,
-		sl:           slog,
+	newmm := &RelayCommitteeModule{
+		csvPath:        csvFilePath,
+		dataTotalNum:   dataNum,
+		batchDataNum:   batchNum,
+		nowDataNum:     0,
+		IpNodeTable:    Ip_nodeTable,
+		Ss:             Ss,
+		sl:             slog,
+		addressToShard: make(map[string]uint64),
+		CrossNum:       0,
+		InNum:          0,
+	}
+	if params.AllocaionMethod != "Monoxide" {
+		newmm.loadAllocationResult()
+	}
+	// utils.ShowContent(newmm.addressToShard)
+	return newmm
+}
+
+func (rthm *RelayCommitteeModule) loadAllocationResult() {
+	filepath := ""
+	if params.AllocaionMethod == "Spring" {
+		filepath = params.AllocationInput
+	} else {
+		filepath = params.OtherAllocationInput
+	}
+	rthm.sl.Slog.Printf("filepath is :%v\n", filepath)
+	data, err := os.ReadFile(filepath)
+	if err != nil {
+		fmt.Println("Error reading JSON file:", err)
+		return
+	}
+
+	err = json.Unmarshal(data, &rthm.addressToShard)
+	if err != nil {
+		fmt.Println("Error unmarshaling JSON:", err)
+		return
 	}
 }
 
 // transfrom, data to transaction
 // check whether it is a legal txs meesage. if so, read txs and put it into the txlist
 func data2tx(data []string, nonce uint64) (*core.Transaction, bool) {
+	// fmt.Println("read tx ", nonce)
 	if data[6] == "0" && data[7] == "0" && len(data[3]) > 16 && len(data[4]) > 16 && data[3] != data[4] {
 		val, ok := new(big.Int).SetString(data[8], 10)
 		if !ok {
@@ -49,6 +84,8 @@ func data2tx(data []string, nonce uint64) (*core.Transaction, bool) {
 		}
 		tx := core.NewTransaction(data[3][2:], data[4][2:], val, nonce)
 		return tx, true
+	} else {
+		fmt.Println("bad tx!")
 	}
 	return &core.Transaction{}, false
 }
@@ -81,8 +118,28 @@ func (rthm *RelayCommitteeModule) txSending(txlist []*core.Transaction) {
 			break
 		}
 		tx := txlist[idx]
-		sendersid := uint64(utils.Addr2Shard(tx.Sender))
-		sendToShard[sendersid] = append(sendToShard[sendersid], tx)
+		var sendersid uint64
+		if params.AllocaionMethod != "Monoxide" {
+			// sendersid := uint64(utils.Addr2Shard(tx.Sender))
+			sendersid, ok := rthm.addressToShard[tx.Sender]
+			receiverid, _ := rthm.addressToShard[tx.Recipient]
+			if sendersid == receiverid {
+				rthm.InNum++
+			} else {
+				rthm.CrossNum++
+			}
+			rthm.sl.Slog.Printf("sender %v receiver %v from %v to %v\n Cross :%v, In :%v, ratio :%v", tx.Sender, tx.Recipient, sendersid, receiverid, rthm.CrossNum, rthm.InNum, rthm.CrossNum*1.0/(rthm.CrossNum+rthm.InNum))
+			fmt.Println("send to ", sendersid)
+			if !ok {
+				rthm.sl.Slog.Printf("%vnot found!\n", tx.Sender)
+			}
+			sendToShard[sendersid] = append(sendToShard[sendersid], tx)
+		} else {
+			sendersid = uint64(utils.Addr2Shard(tx.Sender))
+			sendToShard[sendersid] = append(sendToShard[sendersid], tx)
+		}
+
+		// sendToShard[sendersid] = append(sendToShard[sendersid], tx)
 	}
 }
 
