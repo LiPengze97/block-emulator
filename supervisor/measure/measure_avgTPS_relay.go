@@ -7,11 +7,12 @@ import (
 
 // to test average TPS in this system
 type TestModule_avgTPS_Relay struct {
-	epochID      int
-	excutedTxNum []float64       // record how many excuted txs in a epoch, maybe the cross shard tx will be calculated as a 0.5 tx
-	relayTx      map[string]bool // record whether a relayTx or not
-	startTime    []time.Time     // record when the epoch starts
-	endTime      []time.Time     // record when the epoch ends
+	epochID          int
+	excutedTxNum     []float64       // record how many excuted txs in a epoch, maybe the cross shard tx will be calculated as a 0.5 tx
+	excutedJakiroNum []float64       // Jakiro交易，链内版
+	relayTx          map[string]bool // record whether a relayTx or not
+	startTime        []time.Time     // record when the epoch starts
+	endTime          []time.Time     // record when the epoch ends
 }
 
 func NewTestModule_avgTPS_Relay() *TestModule_avgTPS_Relay {
@@ -57,6 +58,15 @@ func (tat *TestModule_avgTPS_Relay) UpdateMeasureRecord(b *message.BlockInfoMsg)
 			tat.excutedTxNum[epochid] += 1
 		}
 	}
+
+	for _, tx := range b.JakiroTxs {
+		if _, ok := tat.relayTx[string(tx.TxHash)]; ok {
+			tat.excutedTxNum[epochid] += 0.5
+		} else {
+			tat.excutedTxNum[epochid] += 1
+		}
+	}
+
 	if tat.startTime[epochid].IsZero() || tat.startTime[epochid].After(earliestTime) {
 		tat.startTime[epochid] = earliestTime
 	}

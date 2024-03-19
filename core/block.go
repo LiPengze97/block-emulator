@@ -64,47 +64,47 @@ func (bh *BlockHeader) PrintBlockHeader() string {
 	return res
 }
 
-// The definition of block
-type Block struct {
-	Header *BlockHeader
-	Body   []*Transaction
-	Hash   []byte
-}
+// // The definition of block
+// type Block struct {
+// 	Header *BlockHeader
+// 	Body   []*Transaction
+// 	Hash   []byte
+// }
 
-func NewBlock(bh *BlockHeader, bb []*Transaction) *Block {
-	return &Block{Header: bh, Body: bb}
-}
+// func NewBlock(bh *BlockHeader, bb []*Transaction) *Block {
+// 	return &Block{Header: bh, Body: bb}
+// }
 
-func (b *Block) PrintBlock() string {
-	vals := []interface{}{
-		b.Header.Number,
-		b.Hash,
-	}
-	res := fmt.Sprintf("%v\n", vals)
-	fmt.Println(res)
-	return res
-}
+// func (b *Block) PrintBlock() string {
+// 	vals := []interface{}{
+// 		b.Header.Number,
+// 		b.Hash,
+// 	}
+// 	res := fmt.Sprintf("%v\n", vals)
+// 	fmt.Println(res)
+// 	return res
+// }
 
-// Encode Block for storing
-func (b *Block) Encode() []byte {
-	var buff bytes.Buffer
-	enc := gob.NewEncoder(&buff)
-	err := enc.Encode(b)
-	if err != nil {
-		log.Panic(err)
-	}
-	return buff.Bytes()
-}
+// // Encode Block for storing
+// func (b *Block) Encode() []byte {
+// 	var buff bytes.Buffer
+// 	enc := gob.NewEncoder(&buff)
+// 	err := enc.Encode(b)
+// 	if err != nil {
+// 		log.Panic(err)
+// 	}
+// 	return buff.Bytes()
+// }
 
-// Decode Block
-func DecodeB(b []byte) *Block {
-	var block Block
+// // Decode Block
+// func DecodeB(b []byte) *Block {
+// 	var block Block
 
-	decoder := gob.NewDecoder(bytes.NewReader(b))
-	err := decoder.Decode(&block)
-	if err != nil {
-		log.Panic(err)
-	}
+// 	decoder := gob.NewDecoder(bytes.NewReader(b))
+// 	err := decoder.Decode(&block)
+// 	if err != nil {
+// 		log.Panic(err)
+// 	}
 
-	return &block
-}
+// 	return &block
+// }

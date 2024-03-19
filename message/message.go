@@ -24,6 +24,9 @@ const (
 
 	CBlockInfo MessageType = "BlockInfo"
 	CSeqIDinfo MessageType = "SequenceID"
+
+	CJakiroTx            MessageType = "jakirotx"
+	CJakiroRollupConfirm MessageType = "jakirorollup"
 )
 
 var (
@@ -37,9 +40,11 @@ type RawMessage struct {
 }
 
 type Request struct {
-	RequestType RequestType
-	Msg         RawMessage // request message
-	ReqTime     time.Time  // request time
+	RequestType      RequestType
+	Msg              RawMessage // request message
+	ReqTime          time.Time  // request time
+	CanSendJakiroTx  bool
+	AccountCandidate []string //如果CanSendJakiroTx为true，这里需要添加相应内容用于验证
 }
 
 type PrePrepare struct {
@@ -49,15 +54,17 @@ type PrePrepare struct {
 }
 
 type Prepare struct {
-	Digest     []byte // To identify which request is prepared by this node
-	SeqID      uint64
-	SenderNode *shard.Node // To identify who send this message
+	Digest          []byte // To identify which request is prepared by this node
+	SeqID           uint64
+	SenderNode      *shard.Node // To identify who send this message
+	CanSendJakiroTx bool
 }
 
 type Commit struct {
-	Digest     []byte // To identify which request is prepared by this node
-	SeqID      uint64
-	SenderNode *shard.Node // To identify who send this message
+	Digest          []byte // To identify which request is prepared by this node
+	SeqID           uint64
+	SenderNode      *shard.Node // To identify who send this message
+	CanSendJakiroTx bool
 }
 
 type Reply struct {
@@ -85,6 +92,19 @@ type InjectTxs struct {
 	ToShardID uint64
 }
 
+type JakiroTx struct {
+	Txs                  []*core.Transaction
+	AccountsInitialState []*core.AccountState
+	AccountAddr          []string
+	FromShard            uint64
+}
+
+type JakiroConfirm struct {
+	ConfirmHeaders []string
+	FromShard      uint64
+	AccountStates  []*core.AccountState
+}
+
 type BlockInfoMsg struct {
 	BlockBodyLength int
 	ExcutedTxs      []*core.Transaction // txs which are excuted completely
@@ -103,6 +123,10 @@ type BlockInfoMsg struct {
 	Broker1Txs   []*core.Transaction // cross transactions at first time by broker
 	Broker2TxNum uint64              // the number of broker 2
 	Broker2Txs   []*core.Transaction // cross transactions at second time by broker
+
+	// for Jakiro
+	ProcessedJakiroTxNum uint64              // 负载轻的链处理的交易
+	JakiroTxs            []*core.Transaction // 负载轻的链处理的交易
 }
 
 type SeqIDinfo struct {

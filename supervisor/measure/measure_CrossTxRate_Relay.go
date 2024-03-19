@@ -1,6 +1,9 @@
 package measure
 
-import "blockEmulator/message"
+import (
+	"blockEmulator/message"
+	"blockEmulator/params"
+)
 
 // to test cross-transaction rate
 type TestCrossTxRate_Relay struct {
@@ -68,5 +71,6 @@ func (tctr *TestCrossTxRate_Relay) OutputRecord() (perEpochCTXratio []float64, t
 	perEpochCTXratio = append(perEpochCTXratio, allEpoch_totTxNum)
 	perEpochCTXratio = append(perEpochCTXratio, allEpoch_ctxNum)
 
-	return perEpochCTXratio, allEpoch_ctxNum / allEpoch_totTxNum
+	// return perEpochCTXratio, allEpoch_ctxNum / allEpoch_totTxNum
+	return perEpochCTXratio, allEpoch_ctxNum / float64(params.TotalDataSize)
 }

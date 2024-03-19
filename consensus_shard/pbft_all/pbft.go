@@ -4,8 +4,8 @@ package pbft_all
 
 import (
 	"blockEmulator/chain"
-	"blockEmulator/consensus_shard/pbft_all/dataSupport"
 	"blockEmulator/consensus_shard/pbft_all/pbft_log"
+	"blockEmulator/core"
 	"blockEmulator/message"
 	"blockEmulator/networks"
 	"blockEmulator/params"
@@ -39,15 +39,19 @@ type PbftConsensusNode struct {
 	view            uint64                       // denote the view of this pbft, the main node can be inferred from this variant
 
 	// the control message and message checking utils in pbft
-	sequenceID        uint64                          // the message sequence id of the pbft
-	stop              bool                            // send stop signal
-	pStop             chan uint64                     // channle for stopping consensus
-	requestPool       map[string]*message.Request     // RequestHash to Request
-	cntPrepareConfirm map[string]map[*shard.Node]bool // count the prepare confirm message, [messageHash][Node]bool
-	cntCommitConfirm  map[string]map[*shard.Node]bool // count the commit confirm message, [messageHash][Node]bool
-	isCommitBordcast  map[string]bool                 // denote whether the commit is broadcast
-	isReply           map[string]bool                 // denote whether the message is reply
-	height2Digest     map[uint64]string               // sequence (block height) -> request, fast read
+	sequenceID         uint64                          // the message sequence id of the pbft
+	stop               bool                            // send stop signal
+	pStop              chan uint64                     // channle for stopping consensus
+	requestPool        map[string]*message.Request     // RequestHash to Request
+	cntPrepareConfirm  map[string]map[*shard.Node]bool // count the prepare confirm message, [messageHash][Node]bool
+	cntPrepareJakiro   map[string]map[*shard.Node]bool // 计算Jakiro消息投了什么票 [messageHash][Node]bool prepare里面
+	cntCommitConfirm   map[string]map[*shard.Node]bool // count the commit confirm message, [messageHash][Node]bool
+	cntCommitJakiro    map[string]map[*shard.Node]bool // 计算Jakiro消息投了什么票 [messageHash][Node]bool commit里面
+	JakiroHeaders      []string                        // 低负载链上节点处理来自高负载的交易的区块头列表
+	JakiroAccountsList []string                        //低负载链上节点处理来自高负载的交易的所有账户的列表
+	isCommitBordcast   map[string]bool                 // denote whether the commit is broadcast
+	isReply            map[string]bool                 // denote whether the message is reply
+	height2Digest      map[uint64]string               // sequence (block height) -> request, fast read
 
 	// locks about pbft
 	sequenceLock sync.Mutex // the lock of sequence
@@ -70,6 +74,15 @@ type PbftConsensusNode struct {
 
 	// to handle the message outside of pbft
 	ohm OpInterShards
+
+	// 负载重的分片有没有已经发送的Jakiro交易
+	HasSentJakiro bool
+
+	// Commit消息判断是否可以把自己交易池里的交易发给另一个链了
+	CanSendJakiroTxs bool
+
+	// 负载重的分片保存要发送的状态
+	AccountStatesToBeSent []*core.AccountState
 }
 
 // generate a pbft consensus for a node
@@ -80,15 +93,31 @@ func NewPbftNode(shardID, nodeID uint64, pcc *params.ChainConfig, messageHandleT
 	p.ShardID = shardID
 	p.NodeID = nodeID
 	p.pbftChainConfig = pcc
+	p.HasSentJakiro = false
+	p.CanSendJakiroTxs = false
 	fp := "./record/ldb/s" + strconv.FormatUint(shardID, 10) + "/n" + strconv.FormatUint(nodeID, 10)
 	var err error
 	p.db, err = rawdb.NewLevelDBDatabase(fp, 0, 1, "accountState", false)
 	if err != nil {
 		log.Panic(err)
 	}
+
 	p.CurChain, err = chain.NewBlockChain(pcc, p.db)
+
 	if err != nil {
 		log.Panic("cannot new a blockchain")
+	}
+
+	if _, ok := params.JakiroMapping[shardID]; ok {
+		p.CurChain.IsHighLoadedChain = true
+		p.CurChain.Txpool.IsJakiroTxSourcePool = true
+	}
+
+	for k, v := range params.JakiroMapping {
+		if v == p.ShardID {
+			p.CurChain.JakiroFrom = k
+			break
+		}
 	}
 
 	p.RunningNode = &shard.Node{
@@ -102,7 +131,9 @@ func NewPbftNode(shardID, nodeID uint64, pcc *params.ChainConfig, messageHandleT
 	p.pStop = make(chan uint64)
 	p.requestPool = make(map[string]*message.Request)
 	p.cntPrepareConfirm = make(map[string]map[*shard.Node]bool)
+	p.cntPrepareJakiro = make(map[string]map[*shard.Node]bool)
 	p.cntCommitConfirm = make(map[string]map[*shard.Node]bool)
+	p.cntCommitJakiro = make(map[string]map[*shard.Node]bool)
 	p.isCommitBordcast = make(map[string]bool)
 	p.isReply = make(map[string]bool)
 	p.height2Digest = make(map[uint64]string)
@@ -113,35 +144,12 @@ func NewPbftNode(shardID, nodeID uint64, pcc *params.ChainConfig, messageHandleT
 
 	p.pl = pbft_log.NewPbftLog(shardID, nodeID)
 
+	// if p.CurChain.IsHighLoadedChain {
+	// 	p.pl.Plog.Printf("S%dN%d enables Jakiro. \n", p.ShardID, p.NodeID)
+	// }
+
 	// choose how to handle the messages in pbft or beyond pbft
 	switch string(messageHandleType) {
-	case "CLPA_Broker":
-		ncdm := dataSupport.NewCLPADataSupport()
-		p.ihm = &CLPAPbftInsideExtraHandleMod_forBroker{
-			pbftNode: p,
-			cdm:      ncdm,
-		}
-		p.ohm = &CLPABrokerOutsideModule{
-			pbftNode: p,
-			cdm:      ncdm,
-		}
-	case "CLPA":
-		ncdm := dataSupport.NewCLPADataSupport()
-		p.ihm = &CLPAPbftInsideExtraHandleMod{
-			pbftNode: p,
-			cdm:      ncdm,
-		}
-		p.ohm = &CLPARelayOutsideModule{
-			pbftNode: p,
-			cdm:      ncdm,
-		}
-	case "Broker":
-		p.ihm = &RawBrokerPbftExtraHandleMod{
-			pbftNode: p,
-		}
-		p.ohm = &RawBrokerOutsideModule{
-			pbftNode: p,
-		}
 	default:
 		p.ihm = &RawRelayPbftExtraHandleMod{
 			pbftNode: p,
@@ -152,6 +160,33 @@ func NewPbftNode(shardID, nodeID uint64, pcc *params.ChainConfig, messageHandleT
 	}
 
 	return p
+}
+
+// 根据自己的链的情况和交易池里面的负载，判断是否可以发送Jakiro交易
+func (p *PbftConsensusNode) CanSendJakiroTx(accountCandidates []string) bool {
+	if p.NodeID != 0 {
+		// 由于BlockEmulator里面的从节点并没有真实收到交易，所以这里先注释掉，直接return true
+		/*
+			candidateSum := 0
+			half := p.CurChain.Txpool.GetTxQueueLen() / 2
+			for _, account := range accountCandidates {
+				candidateSum += int(p.CurChain.Txpool.TxNumMap[account].Sum)
+			}
+			// 容忍一定的误差，这里设置的是20%的误差
+			if half*4/5 <= 1.0*candidateSum {
+				return true
+			} else {
+				return false
+			}
+		*/
+		return true
+	}
+
+	if p.CurChain.IsHighLoadedChain && int(len(p.CurChain.Txpool.TxQueue))/params.MaxBlockSize_global >= params.JakiroThreshold && !p.HasSentJakiro {
+		return true
+	} else {
+		return false
+	}
 }
 
 // handle the raw message, send it to corresponded interfaces

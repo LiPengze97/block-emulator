@@ -9,16 +9,28 @@ import (
 )
 
 type TxPool struct {
-	TxQueue   []*Transaction            // transaction Queue
-	RelayPool map[uint64][]*Transaction //designed for sharded blockchain, from Monoxide
-	lock      sync.Mutex
+	TxQueue              []*Transaction            // transaction Queue
+	RelayPool            map[uint64][]*Transaction //designed for sharded blockchain, from Monoxide
+	JakiroPool           []*Transaction
+	IsJakiroTxSourcePool bool //负载高的为true，负载低的为false
+	lock                 sync.Mutex
+	jakiroLock           sync.Mutex
+	TxNumMap             map[string]*utils.AccountTxNum // 每个地址里面有多少交易
+	AddrDivsionMap       map[string]bool                // 这个地址被分到第一个部分还是第二个部分
+	Part1Num             uint64
+	Part2Num             uint64
 	// The pending list is ignored
 }
 
 func NewTxPool() *TxPool {
 	return &TxPool{
-		TxQueue:   make([]*Transaction, 0),
-		RelayPool: make(map[uint64][]*Transaction),
+		TxQueue:              make([]*Transaction, 0),
+		RelayPool:            make(map[uint64][]*Transaction),
+		TxNumMap:             make(map[string]*utils.AccountTxNum),
+		AddrDivsionMap:       make(map[string]bool),
+		IsJakiroTxSourcePool: false,
+		Part1Num:             0,
+		Part2Num:             0,
 	}
 }
 
@@ -30,6 +42,73 @@ func (txpool *TxPool) AddTx2Pool(tx *Transaction) {
 		tx.Time = time.Now()
 	}
 	txpool.TxQueue = append(txpool.TxQueue, tx)
+	//TODO:统计一下时间开开销
+	if txpool.IsJakiroTxSourcePool {
+		txpool.updateTxNumMap(tx)
+	}
+
+}
+
+func getAddrAndType(tx *Transaction) (string, int) {
+	if tx.Relayed {
+		return tx.Recipient, 0 // Relay2
+	} else if utils.Addr2Shard(tx.Sender) == utils.Addr2Shard(tx.Recipient) {
+		return tx.Sender, 1 // Intra
+	} else {
+		return tx.Sender, 2 // Relay1
+	}
+}
+
+// 判断如何更新TxNumMap
+func (txpool *TxPool) updateTxNumMap(tx *Transaction) {
+	addr, type_ := getAddrAndType(tx)
+	if _, ok := txpool.AddrDivsionMap[addr]; !ok {
+		if txpool.Part1Num > txpool.Part2Num { // false是第二部分，true是第一部分
+			txpool.AddrDivsionMap[addr] = false
+		} else {
+			txpool.AddrDivsionMap[addr] = true
+		}
+		txpool.TxNumMap[addr] = utils.NewAccountTxNum()
+	}
+	switch type_ {
+	case 0:
+		txpool.TxNumMap[addr].Relay2Tx += 1
+	case 1:
+		txpool.TxNumMap[addr].IntraTx += 1
+	case 2:
+		txpool.TxNumMap[addr].Relay1Tx += 1
+	}
+
+	if txpool.AddrDivsionMap[addr] {
+		txpool.Part1Num += 1
+	} else {
+		txpool.Part2Num += 1
+	}
+
+}
+
+// 减少TxNum的函数
+func (txpool *TxPool) minusTxNumMap(type_ int, addr string) {
+	switch type_ {
+	case 0:
+		txpool.TxNumMap[addr].Relay2Tx -= 1
+	case 1:
+		txpool.TxNumMap[addr].IntraTx -= 1
+	case 2:
+		txpool.TxNumMap[addr].Relay1Tx -= 1
+	}
+
+	if txpool.AddrDivsionMap[addr] {
+		txpool.Part1Num -= 1
+	} else {
+		txpool.Part2Num -= 1
+	}
+
+	if txpool.TxNumMap[addr].Relay1Tx+txpool.TxNumMap[addr].Relay2Tx+txpool.TxNumMap[addr].IntraTx == 0 {
+		delete(txpool.TxNumMap, addr)
+		delete(txpool.AddrDivsionMap, addr)
+	}
+
 }
 
 // Add a list of transactions to the pool
@@ -41,6 +120,9 @@ func (txpool *TxPool) AddTxs2Pool(txs []*Transaction) {
 			tx.Time = time.Now()
 		}
 		txpool.TxQueue = append(txpool.TxQueue, tx)
+		if txpool.IsJakiroTxSourcePool {
+			txpool.updateTxNumMap(tx)
+		}
 	}
 }
 
@@ -64,6 +146,25 @@ func (txpool *TxPool) PackTxs(max_txs uint64) []*Transaction {
 	return txs_Packed
 }
 
+// Pack transactions from second mempool for a proposal
+func (txpool *TxPool) PackJakiroTxs(max_txs uint64) []*Transaction {
+	txpool.jakiroLock.Lock()
+	defer txpool.jakiroLock.Unlock()
+	txNum := max_txs
+	if uint64(len(txpool.TxQueue)) < txNum {
+		txNum = uint64(len(txpool.TxQueue))
+	}
+	txs_Packed := txpool.TxQueue[:txNum]
+	txpool.TxQueue = txpool.TxQueue[txNum:]
+	if txpool.IsJakiroTxSourcePool {
+		for i := 0; i < len(txs_Packed); i++ {
+			addr, type_ := getAddrAndType(txs_Packed[i])
+			txpool.minusTxNumMap(type_, addr)
+		}
+	}
+	return txs_Packed
+}
+
 // Relay transactions
 func (txpool *TxPool) AddRelayTx(tx *Transaction, shardID uint64) {
 	txpool.lock.Lock()
@@ -73,6 +174,37 @@ func (txpool *TxPool) AddRelayTx(tx *Transaction, shardID uint64) {
 		txpool.RelayPool[shardID] = make([]*Transaction, 0)
 	}
 	txpool.RelayPool[shardID] = append(txpool.RelayPool[shardID], tx)
+}
+
+// Split transactions for jakiro tx migrations
+func (txpool *TxPool) SplitTxs() []*Transaction {
+	txpool.lock.Lock()
+	defer txpool.lock.Unlock()
+
+	// 简易版本，对半分，启用下面四行代码即可
+	// txNum := uint64(len(txpool.TxQueue)) / 2
+	// part1 := txpool.TxQueue[:txNum]
+	// txpool.TxQueue = txpool.TxQueue[txNum:]
+
+	// return part1
+
+	// 细致分类
+
+	part1 := make([]*Transaction, 0)
+	part2 := make([]*Transaction, 0)
+
+	for i := 0; i < len(txpool.TxQueue); i++ {
+		tx := txpool.TxQueue[i]
+		addr, type_ := getAddrAndType(tx)
+		if txpool.AddrDivsionMap[addr] {
+			part1 = append(part1, tx)
+		} else {
+			part2 = append(part2, tx)
+			txpool.minusTxNumMap(type_, addr)
+		}
+	}
+	txpool.TxQueue = part1
+	return part2
 }
 
 // txpool get locked
@@ -147,4 +279,19 @@ func (txpool *TxPool) TransferTxs(addr utils.Address) []*Transaction {
 	txpool.TxQueue = newTxQueue
 	txpool.RelayPool = newRelayPool
 	return txTransfered
+}
+
+// 返回某一半
+func (txpool *TxPool) GetHalfAccountPartitioin(part bool) []string {
+	txpool.lock.Lock()
+	defer txpool.lock.Unlock()
+	var res []string
+	for i := 0; i < len(txpool.TxQueue); i++ {
+		tx := txpool.TxQueue[i]
+		addr, _ := getAddrAndType(tx)
+		if !txpool.AddrDivsionMap[addr] {
+			res = append(res, addr)
+		}
+	}
+	return res
 }

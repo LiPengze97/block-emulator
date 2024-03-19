@@ -103,7 +103,7 @@ func (s *Storage) AddBlockHeader(blockhash []byte, bh *core.BlockHeader) {
 }
 
 // add a block into the database
-func (s *Storage) AddBlock(b *core.Block) {
+func (s *Storage) AddBlock(b *core.JakiroBlock) {
 	err := s.DataBase.Update(func(tx *bolt.Tx) error {
 		bbucket := tx.Bucket([]byte(s.blockBucket))
 		err := bbucket.Put(b.Hash, b.Encode())
@@ -136,15 +136,15 @@ func (s *Storage) GetBlockHeader(bhash []byte) (*core.BlockHeader, error) {
 }
 
 // read a block from the database
-func (s *Storage) GetBlock(bhash []byte) (*core.Block, error) {
-	var res *core.Block
+func (s *Storage) GetBlock(bhash []byte) (*core.JakiroBlock, error) {
+	var res *core.JakiroBlock
 	err := s.DataBase.View(func(tx *bolt.Tx) error {
 		bbucket := tx.Bucket([]byte(s.blockBucket))
 		b_encoded := bbucket.Get(bhash)
 		if b_encoded == nil {
 			return errors.New("the block is not existed")
 		}
-		res = core.DecodeB(b_encoded)
+		res = core.DecodeJB(b_encoded)
 		return nil
 	})
 	return res, err

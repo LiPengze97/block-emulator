@@ -33,7 +33,7 @@ func (p *PbftConsensusNode) Propose() {
 		digest := getDigest(r)
 		p.requestPool[string(digest)] = r
 		p.pl.Plog.Printf("S%dN%d put the request into the pool ...\n", p.ShardID, p.NodeID)
-
+		// TODO:如果Jakiro交易取出来了，然后交易是空，prepare消息里面发一个true，或者自己记录一个true，等到commit了，发一个消息给主链
 		ppmsg := message.PrePrepare{
 			RequestMsg: r,
 			Digest:     digest,
@@ -60,6 +60,7 @@ func (p *PbftConsensusNode) handlePrePrepare(content []byte) {
 		log.Panic(err)
 	}
 	flag := false
+	jakiroFlag := false // 从节点判断是否可以发送Jakiro交易
 	if digest := getDigest(ppmsg.RequestMsg); string(digest) != string(ppmsg.Digest) {
 		p.pl.Plog.Printf("S%dN%d : the digest is not consistent, so refuse to prepare. \n", p.ShardID, p.NodeID)
 	} else if p.sequenceID < ppmsg.SeqID {
@@ -69,15 +70,24 @@ func (p *PbftConsensusNode) handlePrePrepare(content []byte) {
 	} else {
 		// do your operation in this interface
 		flag = p.ihm.HandleinPrePrepare(ppmsg)
+		// 每个从节点独立判断是否可以发送Jakiro交易
+		if ppmsg.RequestMsg.CanSendJakiroTx {
+			jakiroFlag = p.CanSendJakiroTx(ppmsg.RequestMsg.AccountCandidate)
+			if jakiroFlag {
+				p.pl.Plog.Printf("S%dN%d : agree send jakiro Tx. \n", p.ShardID, p.NodeID)
+			}
+		}
+
 		p.requestPool[string(getDigest(ppmsg.RequestMsg))] = ppmsg.RequestMsg
 		p.height2Digest[ppmsg.SeqID] = string(getDigest(ppmsg.RequestMsg))
 	}
 	// if the message is true, broadcast the prepare message
 	if flag {
 		pre := message.Prepare{
-			Digest:     ppmsg.Digest,
-			SeqID:      ppmsg.SeqID,
-			SenderNode: p.RunningNode,
+			Digest:          ppmsg.Digest,
+			SeqID:           ppmsg.SeqID,
+			SenderNode:      p.RunningNode,
+			CanSendJakiroTx: jakiroFlag,
 		}
 		prepareByte, err := json.Marshal(pre)
 		if err != nil {
@@ -118,6 +128,18 @@ func (p *PbftConsensusNode) handlePrepare(content []byte) {
 			specifiedcnt -= 1
 		}
 
+		canSendJakiro := false
+		if pmsg.CanSendJakiroTx {
+			p.setJakiroMap(true, string(pmsg.Digest), pmsg.SenderNode)
+			jakiroTrueCnt := 0
+			for range p.cntPrepareConfirm[string(pmsg.Digest)] {
+				jakiroTrueCnt++
+			}
+			if cnt >= specifiedcnt {
+				canSendJakiro = true
+			}
+		}
+
 		// if the node has received 2f messages (itself included), and it haven't committed, then it commit
 		p.lock.Lock()
 		defer p.lock.Unlock()
@@ -125,9 +147,10 @@ func (p *PbftConsensusNode) handlePrepare(content []byte) {
 			p.pl.Plog.Printf("S%dN%d : is going to commit\n", p.ShardID, p.NodeID)
 			// generate commit and broadcast
 			c := message.Commit{
-				Digest:     pmsg.Digest,
-				SeqID:      pmsg.SeqID,
-				SenderNode: p.RunningNode,
+				Digest:          pmsg.Digest,
+				SeqID:           pmsg.SeqID,
+				SenderNode:      p.RunningNode,
+				CanSendJakiroTx: canSendJakiro,
 			}
 			commitByte, err := json.Marshal(c)
 			if err != nil {
@@ -155,10 +178,24 @@ func (p *PbftConsensusNode) handleCommit(content []byte) {
 		cnt++
 	}
 
+	required_cnt := int(2 * p.malicious_nums)
+	if cmsg.CanSendJakiroTx {
+		p.setJakiroMap(false, string(cmsg.Digest), cmsg.SenderNode)
+		jakiroTrueCnt := 0
+		for range p.cntPrepareConfirm[string(cmsg.Digest)] {
+			jakiroTrueCnt++
+		}
+		if cnt >= required_cnt {
+			if p.NodeID == 0 {
+				p.CanSendJakiroTxs = true
+			}
+		}
+	}
+
 	p.lock.Lock()
 	defer p.lock.Unlock()
 	// the main node will not send the prepare message
-	required_cnt := int(2 * p.malicious_nums)
+
 	if cnt >= required_cnt && !p.isReply[string(cmsg.Digest)] {
 		p.pl.Plog.Printf("S%dN%d : has received 2f + 1 commits ... \n", p.ShardID, p.NodeID)
 		// if this node is left behind, so it need to requst blocks

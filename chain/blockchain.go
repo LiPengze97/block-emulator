@@ -22,14 +22,18 @@ import (
 )
 
 type BlockChain struct {
-	db           ethdb.Database      // the leveldb database to store in the disk, for status trie
-	triedb       *trie.Database      // the trie database which helps to store the status trie
-	ChainConfig  *params.ChainConfig // the chain configuration, which can help to identify the chain
-	CurrentBlock *core.Block         // the top block in this blockchain
-	Storage      *storage.Storage    // Storage is the bolt-db to store the blocks
-	Txpool       *core.TxPool        // the transaction pool
-	PartitionMap map[string]uint64   // the partition map which is defined by some algorithm can help account parition
-	pmlock       sync.RWMutex
+	db          ethdb.Database      // the leveldb database to store in the disk, for status trie
+	triedb      *trie.Database      // the trie database which helps to store the status trie
+	ChainConfig *params.ChainConfig // the chain configuration, which can help to identify the chain
+	// CurrentBlock       *core.Block         // the top block in this blockchain
+	CurrentBlock      *core.JakiroBlock // the top block in this blockchain
+	Storage           *storage.Storage  // Storage is the bolt-db to store the blocks
+	Txpool            *core.TxPool      // the transaction pool for blockchain1
+	Txpool2           *core.TxPool      // the transaction pool for blockchain2
+	PartitionMap      map[string]uint64 // the partition map which is defined by some algorithm can help account parition
+	IsHighLoadedChain bool              // false指的是负载轻的，true指的是负载重的
+	JakiroFrom        uint64
+	pmlock            sync.RWMutex
 }
 
 // Get the transaction root, this root can be used to check the transactions
@@ -153,9 +157,29 @@ func (bc *BlockChain) GetUpdateStatusTrie(txs []*core.Transaction) common.Hash {
 	return rt
 }
 
+// // generate (mine) a block, this function return a block
+// func (bc *BlockChain) GenerateBlock() *core.Block {
+// 	// pack the transactions from the txpool
+// 	txs := bc.Txpool.PackTxs(bc.ChainConfig.BlockSize)
+// 	bh := &core.BlockHeader{
+// 		ParentBlockHash: bc.CurrentBlock.Hash,
+// 		Number:          bc.CurrentBlock.Header.Number + 1,
+// 		Time:            time.Now(),
+// 	}
+// 	// handle transactions to build root
+// 	rt := bc.GetUpdateStatusTrie(txs)
+
+// 	bh.StateRoot = rt.Bytes()
+// 	bh.TxRoot = GetTxTreeRoot(txs)
+// 	b := core.NewBlock(bh, txs)
+// 	b.Header.Miner = 0
+// 	b.Hash = b.Header.Hash()
+// 	return b
+// }
+
 // generate (mine) a block, this function return a block
-func (bc *BlockChain) GenerateBlock() *core.Block {
-	// pack the transactions from the txpool
+func (bc *BlockChain) GenerateJakiroBlock() *core.JakiroBlock {
+	// pack the transactions from the txpool for local blockchain
 	txs := bc.Txpool.PackTxs(bc.ChainConfig.BlockSize)
 	bh := &core.BlockHeader{
 		ParentBlockHash: bc.CurrentBlock.Hash,
@@ -167,14 +191,28 @@ func (bc *BlockChain) GenerateBlock() *core.Block {
 
 	bh.StateRoot = rt.Bytes()
 	bh.TxRoot = GetTxTreeRoot(txs)
-	b := core.NewBlock(bh, txs)
+
+	bh2 := &core.BlockHeader{}
+	txs2 := make([]*core.Transaction, 0)
+	// !bc.IsHighLoadedChain指的是负载轻的
+	if !bc.IsHighLoadedChain && len(bc.Txpool2.TxQueue) > 0 {
+		// 负载轻的链需要第二部分，否则只需要第一部分
+		bh2 = &core.BlockHeader{
+			ParentBlockHash: bc.CurrentBlock.Hash,
+			Number:          bc.CurrentBlock.Header2.Number + 1,
+			Time:            bh.Time,
+		}
+		txs2 = bc.Txpool2.PackTxs(bc.ChainConfig.BlockSize)
+	}
+	b := core.NewJakiroBlock(bh, txs, bh2, txs2)
 	b.Header.Miner = 0
+	b.Header2.Miner = 0
 	b.Hash = b.Header.Hash()
 	return b
 }
 
 // new a genisis block, this func will be invoked only once for a blockchain object
-func (bc *BlockChain) NewGenisisBlock() *core.Block {
+func (bc *BlockChain) NewGenisisBlock() *core.JakiroBlock {
 	body := make([]*core.Transaction, 0)
 	bh := &core.BlockHeader{
 		Number: 0,
@@ -188,13 +226,13 @@ func (bc *BlockChain) NewGenisisBlock() *core.Block {
 	statusTrie := trie.NewEmpty(triedb)
 	bh.StateRoot = statusTrie.Hash().Bytes()
 	bh.TxRoot = GetTxTreeRoot(body)
-	b := core.NewBlock(bh, body)
+	b := core.NewJakiroBlock(bh, body, nil, nil)
 	b.Hash = b.Header.Hash()
 	return b
 }
 
 // add the genisis block in a blockchain
-func (bc *BlockChain) AddGenisisBlock(gb *core.Block) {
+func (bc *BlockChain) AddGenisisBlock(gb *core.JakiroBlock) {
 	bc.Storage.AddBlock(gb)
 	newestHash, err := bc.Storage.GetNewestBlockHash()
 	if err != nil {
@@ -208,7 +246,7 @@ func (bc *BlockChain) AddGenisisBlock(gb *core.Block) {
 }
 
 // add a block
-func (bc *BlockChain) AddBlock(b *core.Block) {
+func (bc *BlockChain) AddBlock(b *core.JakiroBlock) {
 	if b.Header.Number != bc.CurrentBlock.Header.Number+1 {
 		fmt.Println("the block height is not correct")
 		return
@@ -227,11 +265,14 @@ func (bc *BlockChain) AddBlock(b *core.Block) {
 func NewBlockChain(cc *params.ChainConfig, db ethdb.Database) (*BlockChain, error) {
 	fmt.Println("Generating a new blockchain", db)
 	bc := &BlockChain{
-		db:           db,
-		ChainConfig:  cc,
-		Txpool:       core.NewTxPool(),
-		Storage:      storage.NewStorage(cc),
-		PartitionMap: make(map[string]uint64),
+		db:                db,
+		ChainConfig:       cc,
+		Txpool:            core.NewTxPool(),
+		Txpool2:           core.NewTxPool(),
+		Storage:           storage.NewStorage(cc),
+		PartitionMap:      make(map[string]uint64),
+		IsHighLoadedChain: false,
+		JakiroFrom:        999,
 	}
 	curHash, err := bc.Storage.GetNewestBlockHash()
 	if err != nil {
@@ -270,9 +311,27 @@ func NewBlockChain(cc *params.ChainConfig, db ethdb.Database) (*BlockChain, erro
 	return bc, nil
 }
 
-// check a block is valid or not in this blockchain config
-func (bc *BlockChain) IsValidBlock(b *core.Block) error {
+// // check a block is valid or not in this blockchain config
+// func (bc *BlockChain) IsValidBlock(b *core.Block) error {
+// 	if string(b.Header.ParentBlockHash) != string(bc.CurrentBlock.Hash) {
+// 		fmt.Println("the parentblock hash is not equal to the current block hash")
+// 		return errors.New("the parentblock hash is not equal to the current block hash")
+// 	} else if string(GetTxTreeRoot(b.Body)) != string(b.Header.TxRoot) {
+// 		fmt.Println("the transaction root is wrong")
+// 		return errors.New("the transaction root is wrong")
+// 	}
+// 	return nil
+// }
+
+// check a jakiroblock is valid or not in this blockchain config
+func (bc *BlockChain) IsValidJakiroBlock(b *core.JakiroBlock) error {
 	if string(b.Header.ParentBlockHash) != string(bc.CurrentBlock.Hash) {
+		fmt.Println("the parentblock hash is not equal to the current block hash")
+		return errors.New("the parentblock hash is not equal to the current block hash")
+	} else if string(GetTxTreeRoot(b.Body)) != string(b.Header.TxRoot) {
+		fmt.Println("the transaction root is wrong")
+		return errors.New("the transaction root is wrong")
+	} else if string(b.Header.ParentBlockHash) != string(bc.CurrentBlock.Hash) {
 		fmt.Println("the parentblock hash is not equal to the current block hash")
 		return errors.New("the parentblock hash is not equal to the current block hash")
 	} else if string(GetTxTreeRoot(b.Body)) != string(b.Header.TxRoot) {
@@ -324,7 +383,7 @@ func (bc *BlockChain) AddAccounts(ac []string, as []*core.AccountState) {
 	emptyTxs := make([]*core.Transaction, 0)
 	bh.StateRoot = rt.Bytes()
 	bh.TxRoot = GetTxTreeRoot(emptyTxs)
-	b := core.NewBlock(bh, emptyTxs)
+	b := core.NewJakiroBlock(bh, emptyTxs, nil, nil)
 	b.Header.Miner = 0
 	b.Hash = b.Header.Hash()
 

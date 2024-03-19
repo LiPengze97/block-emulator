@@ -31,6 +31,7 @@ func (ttnc *TestTxNumCount_Relay) UpdateMeasureRecord(b *message.BlockInfoMsg) {
 	}
 
 	ttnc.txNum[epochid] += float64(len(b.ExcutedTxs))
+	ttnc.txNum[epochid] += float64(len(b.JakiroTxs))
 }
 
 func (ttnc *TestTxNumCount_Relay) HandleExtraMessage([]byte) {}

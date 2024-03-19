@@ -28,6 +28,21 @@ func (p *PbftConsensusNode) set2DMap(isPrePareConfirm bool, key string, val *sha
 	}
 }
 
+// set 2d map 用true和false改的，所以这里再写一个函数，少改一点
+func (p *PbftConsensusNode) setJakiroMap(isPrePareConfirm bool, key string, val *shard.Node) {
+	if isPrePareConfirm {
+		if _, ok := p.cntPrepareJakiro[key]; !ok {
+			p.cntPrepareJakiro[key] = make(map[*shard.Node]bool)
+		}
+		p.cntPrepareJakiro[key][val] = true
+	} else {
+		if _, ok := p.cntCommitJakiro[key]; !ok {
+			p.cntCommitJakiro[key] = make(map[*shard.Node]bool)
+		}
+		p.cntCommitJakiro[key][val] = true
+	}
+}
+
 // get neighbor nodes in a shard
 func (p *PbftConsensusNode) getNeighborNodes() []string {
 	receiverNodes := make([]string, 0)
@@ -54,7 +69,7 @@ func (p *PbftConsensusNode) writeCSVline(str []string) {
 		defer file.Close()
 
 		w := csv.NewWriter(file)
-		title := []string{"txpool size", "tx", "ctx"}
+		title := []string{"txpool size", "tx", "ctx", "JakiroTx"}
 		w.Write(title)
 		w.Flush()
 		w.Write(str)
