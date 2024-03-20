@@ -3,6 +3,9 @@ package message
 import (
 	"blockEmulator/core"
 	"blockEmulator/shard"
+	"encoding/gob"
+	"bytes"
+	"log"
 	"time"
 )
 
@@ -27,6 +30,7 @@ const (
 
 	CJakiroTx            MessageType = "jakirotx"
 	CJakiroRollupConfirm MessageType = "jakirorollup"
+
 )
 
 var (
@@ -97,6 +101,27 @@ type JakiroTx struct {
 	AccountsInitialState []*core.AccountState
 	AccountAddr          []string
 	FromShard            uint64
+}
+func (jtx *JakiroTx) Encode() []byte {
+	var buff bytes.Buffer
+	enc := gob.NewEncoder(&buff)
+	err := enc.Encode(jtx)
+	if err != nil {
+		log.Panic(err)
+	}
+	return buff.Bytes()
+}
+
+func DecodeJakiroTxMsg(content []byte) *JakiroTx {
+	var jtx JakiroTx
+
+	decoder := gob.NewDecoder(bytes.NewReader(content))
+	err := decoder.Decode(&jtx)
+	if err != nil {
+		log.Panic(err)
+	}
+
+	return &jtx
 }
 
 type JakiroConfirm struct {

@@ -57,10 +57,7 @@ func (d *Supervisor) NewSupervisor(ip string, pcc *params.ChainConfig, committee
 
 	d.Ss = signal.NewStopSignal(2 * int(pcc.ShardNums))
 
-	switch committeeMethod {
-	default:
-		d.comMod = committee.NewRelayCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
-	}
+	d.comMod = committee.NewRelayCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
 
 	d.testMeasureMods = make([]measure.MeasureModule, 0)
 	for _, mModName := range mearsureModNames {

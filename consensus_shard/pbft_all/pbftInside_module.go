@@ -153,11 +153,13 @@ func (rphm *RawRelayPbftExtraHandleMod) HandleinCommit(cmsg *message.Commit) boo
 				AccountAddr:          addrToBeSent,
 				FromShard:            rphm.pbftNode.ShardID,
 			}
-			jByte, err := json.Marshal(jakiro)
-			if err != nil {
-				log.Panic()
-			}
-			msg_send := message.MergeMessage(message.CJakiroTx, jByte)
+			//TODO: 3-21写到这了
+			jktbyte := jakiro.Encode()
+			// jByte, err := json.Marshal(jakiro)
+			// if err != nil {
+			// 	log.Panic()
+			// }
+			msg_send := message.MergeMessage(message.CJakiroTx, jktbyte)
 			go networks.TcpDial(msg_send, rphm.pbftNode.ip_nodeTable[targetSid][0])
 			rphm.pbftNode.pl.Plog.Printf("S%dN%d : sended jakiro %d txs to %d\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID, len(jakiro.Txs), targetSid)
 			rphm.pbftNode.CanSendJakiroTxs = false

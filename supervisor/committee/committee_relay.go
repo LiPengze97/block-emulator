@@ -47,6 +47,7 @@ func data2tx(data []string, nonce uint64) (*core.Transaction, bool) {
 		if !ok {
 			log.Panic("new int failed\n")
 		}
+		// log.Println("Invalid tx!!")
 		tx := core.NewTransaction(data[3][2:], data[4][2:], val, nonce)
 		return tx, true
 	}
@@ -58,7 +59,7 @@ func (rthm *RelayCommitteeModule) HandleOtherMessage([]byte) {}
 func (rthm *RelayCommitteeModule) txSending(txlist []*core.Transaction) {
 	// the txs will be sent
 	sendToShard := make(map[uint64][]*core.Transaction)
-
+	rthm.sl.Slog.Printf("~~~~sending %d Txs.\n", len(txlist))
 	for idx := 0; idx <= len(txlist); idx++ {
 		if idx > 0 && (idx%params.InjectSpeed == 0 || idx == len(txlist)) {
 			// send to shard
