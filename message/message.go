@@ -3,8 +3,8 @@ package message
 import (
 	"blockEmulator/core"
 	"blockEmulator/shard"
-	"encoding/gob"
 	"bytes"
+	"encoding/gob"
 	"log"
 	"time"
 )
@@ -29,8 +29,8 @@ const (
 	CSeqIDinfo MessageType = "SequenceID"
 
 	CJakiroTx            MessageType = "jakirotx"
+	CJakiroByteTx        MessageType = "jakiroByteTx"
 	CJakiroRollupConfirm MessageType = "jakirorollup"
-
 )
 
 var (
@@ -102,6 +102,7 @@ type JakiroTx struct {
 	AccountAddr          []string
 	FromShard            uint64
 }
+
 func (jtx *JakiroTx) Encode() []byte {
 	var buff bytes.Buffer
 	enc := gob.NewEncoder(&buff)

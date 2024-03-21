@@ -345,11 +345,16 @@ func (bc *BlockChain) IsValidJakiroBlock(b *core.JakiroBlock) error {
 func (bc *BlockChain) AddAccounts(ac []string, as []*core.AccountState) {
 	fmt.Printf("The len of accounts is %d, now adding the accounts\n", len(ac))
 
-	bh := &core.BlockHeader{
-		ParentBlockHash: bc.CurrentBlock.Hash,
-		Number:          bc.CurrentBlock.Header.Number + 1,
-		Time:            time.Time{},
-	}
+	// bh := &core.BlockHeader{
+	// 	ParentBlockHash: bc.CurrentBlock.Hash,
+	// 	Number:          bc.CurrentBlock.Header.Number + 1,
+	// 	Time:            time.Time{},
+	// }
+	// bh2 := &core.BlockHeader{
+	// 	ParentBlockHash: bc.CurrentBlock.Hash,
+	// 	Number:          bc.CurrentBlock.Header2.Number + 1,
+	// 	Time:            time.Time{},
+	// }
 	// handle transactions to build root
 	rt := common.BytesToHash(bc.CurrentBlock.Header.StateRoot)
 	if len(ac) != 0 {
@@ -358,17 +363,17 @@ func (bc *BlockChain) AddAccounts(ac []string, as []*core.AccountState) {
 			log.Panic(err)
 		}
 		for i, addr := range ac {
-			if bc.Get_PartitionMap(addr) == bc.ChainConfig.ShardID {
-				ib := new(big.Int)
-				ib.Add(ib, as[i].Balance)
-				new_state := &core.AccountState{
-					Balance: ib,
-					Nonce:   as[i].Nonce,
-				}
-				st.Update([]byte(addr), new_state.Encode())
+			// if bc.Get_PartitionMap(addr) == bc.ChainConfig.ShardID {
+			ib := new(big.Int)
+			ib.Add(ib, as[i].Balance)
+			new_state := &core.AccountState{
+				Balance: ib,
+				Nonce:   as[i].Nonce,
 			}
+			st.Update([]byte(addr), new_state.Encode())
+			// }
 		}
-		rrt, ns := st.Commit(false)
+		_, ns := st.Commit(false)
 		err = bc.triedb.Update(trie.NewWithNodeSet(ns))
 		if err != nil {
 			log.Panic(err)
@@ -377,18 +382,18 @@ func (bc *BlockChain) AddAccounts(ac []string, as []*core.AccountState) {
 		if err != nil {
 			log.Panic(err)
 		}
-		rt = rrt
+		// rt = rrt
 	}
 
-	emptyTxs := make([]*core.Transaction, 0)
-	bh.StateRoot = rt.Bytes()
-	bh.TxRoot = GetTxTreeRoot(emptyTxs)
-	b := core.NewJakiroBlock(bh, emptyTxs, nil, nil)
-	b.Header.Miner = 0
-	b.Hash = b.Header.Hash()
+	// emptyTxs := make([]*core.Transaction, 0)
+	// bh.StateRoot = rt.Bytes()
+	// bh.TxRoot = GetTxTreeRoot(emptyTxs)
+	// b := core.NewJakiroBlock(bh, emptyTxs, bh2, emptyTxs)
+	// b.Header.Miner = 0
+	// b.Hash = b.Header.Hash()
 
-	bc.CurrentBlock = b
-	bc.Storage.AddBlock(b)
+	// bc.CurrentBlock = b
+	// bc.Storage.AddBlock(b)
 }
 
 // fetch accounts

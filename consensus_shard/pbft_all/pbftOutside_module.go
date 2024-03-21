@@ -57,12 +57,11 @@ func (rrom *RawRelayOutsideModule) handleInjectTx(content []byte) {
 // 插入第二个交易池
 func (rrom *RawRelayOutsideModule) handleJakiroInjectTx(content []byte) {
 	it := new(message.JakiroTx)
-	atm := message.DecodeAccountTransferMsg(r.Msg.Content)
 	err := json.Unmarshal(content, it)
 	if err != nil {
 		log.Panic(err)
 	}
-	rrom.pbftNode.pl.Plog.Printf("account:%d\n account state:%d", it.AccountAddr, it.AccountsInitialState)
+	// rrom.pbftNode.pl.Plog.Printf("account:%v\n account state:%v", it.AccountAddr, it.AccountsInitialState)
 	rrom.pbftNode.CurChain.Txpool2.AddTxs2Pool(it.Txs)
 	rrom.pbftNode.JakiroAccountsList = it.AccountAddr
 	rrom.pbftNode.CurChain.AddAccounts(it.AccountAddr, it.AccountsInitialState)
