@@ -216,7 +216,11 @@ func (rphm *RawRelayPbftExtraHandleMod) HandleinCommit(cmsg *message.Commit) boo
 		go networks.TcpDial(msg_send, rphm.pbftNode.ip_nodeTable[params.DeciderShard][0])
 		rphm.pbftNode.pl.Plog.Printf("S%dN%d : sended excuted txs\n", rphm.pbftNode.ShardID, rphm.pbftNode.NodeID)
 		rphm.pbftNode.CurChain.Txpool.GetLocked()
-		rphm.pbftNode.writeCSVline([]string{strconv.Itoa(len(rphm.pbftNode.CurChain.Txpool.TxQueue)), strconv.Itoa(len(txExcuted)), strconv.Itoa(int(bim.Relay1TxNum)), strconv.Itoa(int(bim.ProcessedJakiroTxNum))})
+		jakiroTxPoolSize := 0
+		if !rphm.pbftNode.CurChain.IsHighLoadedChain {
+			jakiroTxPoolSize = len(rphm.pbftNode.CurChain.Txpool2.TxQueue)
+		}
+		rphm.pbftNode.writeCSVline([]string{strconv.Itoa(len(rphm.pbftNode.CurChain.Txpool.TxQueue)), strconv.Itoa(jakiroTxPoolSize), strconv.Itoa(len(txExcuted)), strconv.Itoa(int(bim.Relay1TxNum)), strconv.Itoa(int(bim.ProcessedJakiroTxNum))})
 		rphm.pbftNode.CurChain.Txpool.GetUnlocked()
 	}
 	return true
