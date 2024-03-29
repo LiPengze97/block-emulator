@@ -3,9 +3,9 @@ package params
 var (
 	Block_Interval      = 5000   // generate new block interval
 	MaxBlockSize_global = 2000   // the block contains the maximum number of transactions
-	InjectSpeed         = 9000   // the transaction inject speed 22250 for 32
-	TotalDataSize       = 500000 // the total number of txs
-	BatchSize           = 18000  // supervisor read a batch of txs then send them, it should be larger than inject speed
+	InjectSpeed         = 4500   // the transaction inject speed 22250 for 32
+	TotalDataSize       = 250000 // the total number of txs
+	BatchSize           = 36000  // supervisor read a batch of txs then send them, it should be larger than inject speed
 	BrokerNum           = 10
 	NodesInShard        = 3
 	ShardNum            = 32
@@ -13,13 +13,13 @@ var (
 	LogWrite_path       = "./log"           // log output path
 	SupervisorAddr      = "127.0.0.1:18800" //supervisor ip address
 	// FileInput           = `/mnt/e/eth_data/11000000to11999999_BlockTransaction.csv`
-	FileInput = `/mnt/e/eth_data/16000000to16249999_BlockTransaction.csv`
+	FileInput = `/users/pzl97/17000000to17249999_BlockTransaction_first_5_million.csv`
 	// FileInput = `/mnt/e/eth_data/17000000to17249999_BlockTransaction.csv`
 
 	// default
-	JakiroMapping = map[uint64]uint64{
-		123: 345,
-	}
+	// JakiroMapping = map[uint64]uint64{
+	// 	123: 345,
+	// }
 
 	// 4
 	// JakiroMapping = map[uint64]uint64{
@@ -57,5 +57,11 @@ var (
 	// 	3: 4,
 	// 	16: 7,
 	// }
+
+	// 32
+	JakiroMapping = map[uint64]uint64{
+		0: 2,
+		7: 1,
+	}
 	JakiroThreshold = 4 // 交易池里面的交易超过多少就发jakiro消息
 )
