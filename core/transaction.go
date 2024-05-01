@@ -25,6 +25,8 @@ type Transaction struct {
 
 	// used in transaction relaying
 	Relayed bool
+	// Pyramid 是否为bshard中首先处理的交易
+	BShardProcessed bool
 	// used in broker, if the tx is not a broker1 or broker2 tx, these values should be empty.
 	HasBroker      bool
 	SenderIsBroker bool
@@ -87,5 +89,6 @@ func NewTransaction(sender, recipient string, value *big.Int, nonce uint64) *Tra
 	tx.RawTxHash = nil
 	tx.HasBroker = false
 	tx.SenderIsBroker = false
+	tx.BShardProcessed = false
 	return tx
 }

@@ -40,6 +40,8 @@ func BuildSupervisor(nnm, snm, mod uint64) {
 	var measureMod []string
 	if mod == 0 || mod == 2 {
 		measureMod = params.MeasureBrokerMod
+	} else if mod == 4 {
+		measureMod = params.MeasurePyramidMod
 	} else {
 		measureMod = params.MeasureRelayMod
 	}

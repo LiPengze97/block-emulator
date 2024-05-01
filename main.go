@@ -21,7 +21,7 @@ func main() {
 	pflag.IntVarP(&nodeNum, "nodeNum", "N", 4, "indicate how many nodes of each shard are deployed")
 	pflag.IntVarP(&shardID, "shardID", "s", 0, "id of the shard to which this node belongs, for example, 0")
 	pflag.IntVarP(&nodeID, "nodeID", "n", 0, "id of this node, for example, 0")
-	pflag.IntVarP(&modID, "modID", "m", 3, "choice Committee Method,for example, 0, [CLPA_Broker,CLPA,Broker,Relay] ")
+	pflag.IntVarP(&modID, "modID", "m", 3, "choice Committee Method,for example, 0, [CLPA_Broker,CLPA,Broker,Relay,Pyramid] ")
 	pflag.BoolVarP(&isClient, "client", "c", false, "whether this node is a client")
 	pflag.BoolVarP(&isGen, "gen", "g", false, "generation bat")
 	pflag.Parse()

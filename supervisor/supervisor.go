@@ -64,6 +64,8 @@ func (d *Supervisor) NewSupervisor(ip string, pcc *params.ChainConfig, committee
 		d.comMod = committee.NewCLPACommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize, 80)
 	case "Broker":
 		d.comMod = committee.NewBrokerCommitteeMod(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
+	case "Pyramid":
+		d.comMod = committee.NewPyramidCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
 	default:
 		d.comMod = committee.NewRelayCommitteeModule(d.Ip_nodeTable, d.Ss, d.sl, params.FileInput, params.TotalDataSize, params.BatchSize)
 	}
@@ -75,6 +77,8 @@ func (d *Supervisor) NewSupervisor(ip string, pcc *params.ChainConfig, committee
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestModule_avgTPS_Relay())
 		case "TPS_Broker":
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestModule_avgTPS_Broker())
+		case "TPS_Pyramid":
+			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestModule_avgTPS_Pyramid())
 		case "TCL_Relay":
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestModule_TCL_Relay())
 		case "TCL_Broker":
@@ -83,10 +87,14 @@ func (d *Supervisor) NewSupervisor(ip string, pcc *params.ChainConfig, committee
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestCrossTxRate_Relay())
 		case "CrossTxRate_Broker":
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestCrossTxRate_Broker())
+		case "CrossTxRate_Pyramid":
+			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestCrossTxRate_Pyramid())
 		case "TxNumberCount_Relay":
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestTxNumCount_Relay())
 		case "TxNumberCount_Broker":
 			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestTxNumCount_Broker())
+		case "TxNumberCount_Pyramid":
+			d.testMeasureMods = append(d.testMeasureMods, measure.NewTestTxNumCount_Pyramid())
 		default:
 		}
 	}

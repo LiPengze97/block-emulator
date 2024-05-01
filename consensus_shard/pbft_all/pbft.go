@@ -142,6 +142,21 @@ func NewPbftNode(shardID, nodeID uint64, pcc *params.ChainConfig, messageHandleT
 		p.ohm = &RawBrokerOutsideModule{
 			pbftNode: p,
 		}
+	case "Pyramid":
+		var isBshard_ bool
+		if p.ShardID >= uint64(params.ShardNum-params.PyramidBShardNums) {
+			isBshard_ = true
+		} else {
+			isBshard_ = false
+		}
+		p.ihm = &PyramidPbftExtraHandleMod{
+			isBshard: isBshard_,
+			pbftNode: p,
+		}
+		p.ohm = &PyramidOutsideModule{
+			isBshard: isBshard_,
+			pbftNode: p,
+		}
 	default:
 		p.ihm = &RawRelayPbftExtraHandleMod{
 			pbftNode: p,

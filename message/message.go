@@ -83,6 +83,7 @@ type SendOldMessage struct {
 type InjectTxs struct {
 	Txs       []*core.Transaction
 	ToShardID uint64
+	From      uint64 // 0是supervisor，1是b-shard
 }
 
 type BlockInfoMsg struct {
@@ -97,6 +98,10 @@ type BlockInfoMsg struct {
 	// for transaction relay
 	Relay1TxNum uint64              // the number of cross shard txs
 	Relay1Txs   []*core.Transaction // cross transactions in chain first time
+
+	// for Pyramid transactions
+	ParamidTxNum uint64              // the number of cross shard txs
+	PyramidTxs   []*core.Transaction // cross transactions in chain first time
 
 	// for broker
 	Broker1TxNum uint64              // the number of broker 1
