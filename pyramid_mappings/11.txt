@@ -5,18 +5,29 @@
 --------------------------------------------------------------------------------
     // 110000
 
-	// 4
-	// JakiroMapping = map[uint64]uint64{
-	// 	0: 2,
-	// 	1: 3,
-	// }
-
 	// // 8
 	// JakiroMapping = map[uint64]uint64{
 	// 	0: 2,
 	// 	5: 4,
 	// 	7: 3,
 	// }
+	PyramidBShardNums = 3                  // pyramid中b-shard的数量
+	PyramidMappings   = map[uint64]uint64{ //看b-shard满足哪个分片到哪个分片的，是双向mapping
+		0: 2,
+		2: 0,
+		5: 4,
+		4: 5,
+		7: 3,
+		3: 7,
+	}
+	IShardBShardMappings = map[uint64]uint64{ //I-shard由哪个B-Shard负责
+		0: 8,
+		2: 8,
+		5: 9,
+		4: 9,
+		7: 10,
+		3: 10,
+	}
 
 	// 16
 	// JakiroMapping = map[uint64]uint64{
@@ -27,6 +38,35 @@
 	// 	13: 12,
 	// 	3:  1,
 	// }
+	PyramidBShardNums = 6                  // pyramid中b-shard的数量
+	PyramidMappings   = map[uint64]uint64{ //看b-shard满足哪个分片到哪个分片的，是双向mapping
+			15: 2,
+			2: 15,
+			8: 4,
+			4: 8,
+			5: 7,
+			7: 5,
+			14: 11,
+			11: 14,
+			13: 12,
+			12: 13,
+			3: 1,
+			1: 3,
+	}
+	IShardBShardMappings = map[uint64]uint64{ //I-shard由哪个B-Shard负责
+		15: 16,
+		2: 16,
+		8: 17,
+		4: 17,
+		5: 18,
+		7: 18,
+		14: 19,
+		11: 19,
+		13: 20,
+		12: 20,
+		3: 21,
+		1: 21,
+	}
 
 	// 32
 	// JakiroMapping = map[uint64]uint64{
@@ -41,3 +81,48 @@
 	// 	3: 4,
 	// 	16: 7,
 	// }
+	PyramidBShardNums = 10                  // pyramid中b-shard的数量
+	PyramidMappings   = map[uint64]uint64{ //看b-shard满足哪个分片到哪个分片的，是双向mapping
+		8: 2,
+		2: 8,
+		15: 14,
+		14: 15,
+		30: 0,
+		0: 30,
+		5: 1,
+		1: 5,
+		31: 20,
+		20: 31,
+		13: 23,
+		23: 13,
+		21: 29,
+		29: 21,
+		6: 25,
+		25: 6,
+		3: 4,
+		4: 3,
+		16: 7,
+		7: 16,
+	}
+	IShardBShardMappings = map[uint64]uint64{ //I-shard由哪个B-Shard负责
+		8: 32,
+		2: 32,
+		15: 33,
+		14: 33,
+		30: 34,
+		0: 34,
+		5: 35,
+		1: 35,
+		31: 36,
+		20: 36,
+		13: 37,
+		23: 37,
+		21: 38,
+		29: 38,
+		6: 39,
+		25: 39,
+		3: 40,
+		4: 40,
+		16: 41,
+		7: 41,
+	}
